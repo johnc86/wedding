@@ -1,3 +1,7 @@
 .hero p {
     color: red;
 }
+
+.hero .othertext {
+    color: green;
+}
