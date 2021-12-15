@@ -1,0 +1,58 @@
+@use '_colour' as col;
+
+@keyframes cd-sequence {
+    0% {
+        -webkit-transform: translateY(-50%) translateX(-2%);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) translateX(-98%);
+    }
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1 };
+}
+
+// @keyframes fadeout {
+//     0% { opacity: 1; }
+//     100% { opacity: 0 };
+// }
+
+@keyframes colshift {
+    0% { fill: col.$c-white; }
+    100% { fill: col.$c-secondary; };
+}
+
+@keyframes shrink {
+    100% {
+        width: 20rem;
+        top: 8rem;
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6 }
+    10% { opacity: 1 }
+    20% { opacity: 0.6 }
+    100% { opacity: 0.6 }
+}
+
+.paintbg {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: paint 5s ease-in-out 5s forwards;
+}
+
+.paintbg:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+@keyframes paint {
+    from {
+        stroke-dashoffset: 1; 
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
