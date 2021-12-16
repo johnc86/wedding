@@ -16,6 +16,11 @@ html, body {
   margin: 0;
   min-height: 100vh;
 }
+@media only screen and (max-width: 940px) {
+  html, body {
+    font-size: 14px;
+  }
+}
 
 body {
   display: flex;
@@ -66,9 +71,10 @@ p, a {
 h1, h2 {
   font-family: "Comforter", cursive;
   font-weight: 600;
-  color: var(--c-black);
-  margin: 0;
+  color: var(--c-secondary);
+  margin: 1rem 0;
   line-height: 3.5rem;
+  text-align: center;
 }
 
 h3, h4, h5, h6, .heading {
@@ -87,19 +93,17 @@ h2 {
 }
 
 .cd-modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 1;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #A0BEFE url(../assets/img/finalframe.png) no-repeat center center;
+  background: #A0BEFE url(../img/finalframe.png) no-repeat center center;
   background-size: cover;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
 
@@ -112,8 +116,6 @@ h2 {
 .cd-modal.visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.7s, visibility 0s;
-  -moz-transition: opacity 0.7s, visibility 0s;
   transition: opacity 0.7s, visibility 0s;
 }
 
@@ -144,8 +146,6 @@ h2 {
   transform: translateY(-50%) translateX(-2%);
   height: 100%;
   width: 2500%;
-  background: url(../assets/img/ink.png) no-repeat 0 0;
-  background-size: 100% 100%;
 }
 
 .cd-transition-layer.visible {
@@ -255,6 +255,14 @@ h2 {
     opacity: 1;
   }
 }
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes colshift {
   0% {
     fill: var(--c-white);
@@ -263,10 +271,9 @@ h2 {
     fill: var(--c-secondary);
   }
 }
-@keyframes shrink {
+@keyframes hide {
   100% {
-    width: 20rem;
-    top: 8rem;
+    display: none;
   }
 }
 @keyframes pulse {
@@ -301,48 +308,70 @@ h2 {
     stroke-dashoffset: 0;
   }
 }
-.mjlogo {
+.intro {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: red;
+}
+.intro__logo {
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
   fill: var(--c-white);
+  width: 90%;
+  animation-name: colshift, fadeout;
+  animation-duration: 2s, 1s;
+  animation-fill-mode: forwards, forwards;
+  animation-delay: 2s, 5s;
+}
+.intro__text {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 10%;
+  color: var(--c-secondary);
   opacity: 0;
-  width: 80%;
-  animation: fadein 4s;
-  animation-fill-mode: forwards;
-  animation-name: fadein, colshift, shrink, fadeout;
-  animation-duration: 4s, 2s, 1s, 1s;
-  animation-delay: 0ms, 4s, 6s, 7s;
-  animation-timing-function: ease-in, ease-out, ease-out, ease-in;
-  animation-fill-mode: forwards, forwards, forwards, forwards;
-  animation-iteration-count: 1, 1, 1, 1;
-  z-index: 100;
+  width: 24ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation-name: fadein, typing, fadeout;
+  animation-duration: 1s, 1s, 1s;
+  animation-timing-function: linear, steps(22), linear;
+  animation-fill-mode: forwards, forwards, forwards;
+  animation-delay: 2s, 2s, 5s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 
-.inv {
-  display: flex column;
-  height: 100%;
-  width: 80%;
-  opacity: 0;
-  background: var(--c-bg);
-  margin: auto;
-  animation: fadein 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 4s;
+@media only screen and (max-width: 940px) {
+  .intro__text {
+    font-size: 5vw;
+    top: calc(50% - 35vw);
+  }
 }
-.inv__header {
+header, .header {
   display: flex;
   padding: 0 0 0 0;
+  margin: 0 auto 1rem auto;
   background: var(--c-bg);
-  width: 100%;
+  width: 80%;
   min-height: 10rem;
 }
-.inv__header--logospace {
+header--logospace, .header--logospace {
+  display: flex;
   width: 16rem;
-  padding-bottom: 15rem;
 }
-.inv__header--l, .inv__header--r {
+header--l, header--r, .header--l, .header--r {
   display: flex;
   width: 100%;
   align-items: center;
@@ -352,39 +381,77 @@ h2 {
   color: var(--c-secondary);
   padding: 1rem;
   opacity: 0.6;
+  text-align: center;
   animation-name: pulse;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-.inv__header--r {
+header--r, .header--r {
   animation-delay: 300ms;
+}
+
+.mjlogo {
+  fill: var(--c-secondary);
+  width: 20rem;
+  margin: auto;
+  padding: 2rem 0 2rem 0;
+}
+
+@media only screen and (max-width: 940px) {
+  header, .header {
+    width: 90%;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+  }
+  header > *, .header > * {
+    width: 100%;
+  }
+  header--logospace, .header--logospace {
+    order: -1;
+    width: 100%;
+  }
+  header--l, header--r, .header--l, .header--r {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+main {
+  min-height: 100vh;
+}
+
+.content {
+  background: #A0BEFE url(../img/finalframe.png) no-repeat fixed center;
+  background-size: 1920px 1080px;
+  min-height: 100vh;
+  visibility: hidden;
+}
+.content.visible {
+  visibility: visible;
+}
+
+.inv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  background: var(--c-bg);
+  margin: auto;
 }
 .inv__content {
   display: flex;
+  flex-direction: column;
   padding: 2rem;
+}
+.inv__RSVP {
+  display: flex;
+}
+.inv__RSVP__form, .inv__RSVP__text {
+  width: 50%;
 }
 
 @media only screen and (max-width: 940px) {
   .inv {
     width: 90%;
-  }
-  .inv__content {
-    padding: 1rem;
-  }
-  .inv__header {
-    flex-wrap: wrap;
-    padding-bottom: 1rem;
-  }
-  .inv__header > * {
-    width: 100%;
-  }
-  .inv__header--logospace {
-    order: -1;
-    margin-bottom: 1rem;
-  }
-  .inv__header--l, .inv__header--r {
-    font-size: 1.5rem;
-    padding: 0 1rem;
   }
 }
 

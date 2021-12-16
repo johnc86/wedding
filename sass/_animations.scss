@@ -14,20 +14,19 @@
     100% { opacity: 1 };
 }
 
-// @keyframes fadeout {
-//     0% { opacity: 1; }
-//     100% { opacity: 0 };
-// }
+@keyframes fadeout {
+    0% { opacity: 1; }
+    100% { opacity: 0 };
+}
 
 @keyframes colshift {
     0% { fill: col.$c-white; }
     100% { fill: col.$c-secondary; };
 }
 
-@keyframes shrink {
+@keyframes hide {
     100% {
-        width: 20rem;
-        top: 8rem;
+        display: none;
     }
 }
 

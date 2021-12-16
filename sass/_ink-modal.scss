@@ -2,27 +2,18 @@
 // Modal window 
 // -------------------------------- */
 .cd-modal {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 1;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #A0BEFE url(../assets/img/finalframe.png) no-repeat center center;
+    background: #A0BEFE url(../img/finalframe.png) no-repeat center center;
     background-size: cover;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
     transition: opacity 0.3s 0s, visibility 0s 0.3s;
-
-    // animation-name: fadeout;
-    // animation-duration: 2s;
-    // animation-delay: 8s;
-    // animation-timing-function: ease-in;
-    // animation-fill-mode: forwards;
-    // animation-iteration-count: 1;
   }
   .cd-modal .modal-content {
     display: flex;
@@ -32,8 +23,6 @@
   .cd-modal.visible {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity 0.7s, visibility 0s;
-    -moz-transition: opacity 0.7s, visibility 0s;
     transition: opacity 0.7s, visibility 0s;
   }
   .cd-modal.visible .modal-content {
@@ -70,8 +59,7 @@
     height: 100%;
     // /* our sprite is composed of 25 frames */
     width: 2500%;
-    background: url(../assets/img/ink.png) no-repeat 0 0;
-    background-size: 100% 100%;
+    
   }
   .cd-transition-layer.visible {
     opacity: 1;

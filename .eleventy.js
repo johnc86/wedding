@@ -1,17 +1,13 @@
 module.exports = function (eleventyConfig) {
-    // Output directory: _site
-    // Copy `img/` to `_site/img`
-    eleventyConfig.addPassthroughCopy("assets/");
+    eleventyConfig.addPassthroughCopy("website/img");
+    eleventyConfig.addPassthroughCopy("website/js");
 
     eleventyConfig.setBrowserSyncConfig({
         files: [
-            './_site/css/**/*.css',
-            './assets'
+            './docs/css/*.css',
         ]
     });
-};
-
-module.exports = function (eleventyConfig) {
+    
     return {
         dir: {
             input: "website",

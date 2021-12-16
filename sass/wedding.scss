@@ -5,57 +5,45 @@
 @use '_animations';
 @use '_core' as core;
 @use '_logo';
+@use '_header';
+
+main {
+    min-height: 100vh;
+}
+
+.content {
+    background: #A0BEFE url(../img/finalframe.png) no-repeat fixed center;
+    background-size: 1920px 1080px;
+    min-height: 100vh;
+    visibility: hidden;
+
+
+    &.visible {
+        visibility: visible;
+    }
+}
 
 .inv {
-    display: flex column;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 80%;
-
-    opacity: 0;
     background: col.$c-bg;
-    
     margin: auto;
-
-    animation: fadein 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-
-    &__header {
-        display: flex;
-        padding: 0 0 0 0;
-        background: col.$c-bg;
-        width: 100%;
-        min-height: 10rem;
-
-        &--logospace {
-            width: 16rem;
-            // background: red;
-            padding-bottom: 15rem;
-        }
-
-        &--l, &--r {
-            display:flex;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            font-family: fonts.$f-accent;
-            font-size: 2rem;
-            color: col.$c-secondary;
-            padding: 1rem;
-            opacity: 0.6;
-
-            animation-name: pulse;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
-        }
-
-        &--r { animation-delay: 300ms }
-    }
 
     &__content {
         // margin-top: 7rem;
         display:flex;
+        flex-direction: column;
         padding: 2rem;
+    }
+
+    &__RSVP {
+        display:flex;
+
+        &__form, &__text {
+            width: 50%;
+        }
     }
 }
 
@@ -64,28 +52,7 @@
         width: 90%;
 
         &__content {
-            padding: 1rem;
-        }
-
-        &__header {
-            flex-wrap: wrap;
-            padding-bottom: 1rem;
-
-            >*{
-                width: 100%;
-                
-            }
-
-            &--logospace {
-                order: -1;
-                margin-bottom: 1rem;
-            }
-
-            &--l, &--r {
-                font-size: 1.5rem;
-                padding: 0 1rem;
-                // background: col.$c-primary;
-            }
+            // padding: 1rem;
         }
     }
 }

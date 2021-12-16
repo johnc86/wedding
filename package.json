@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "sass": "npx sass sass:_site/css --watch"
+    "sass": "npx sass sass:docs/css --watch"
   },
   "keywords": [],
   "author": "",
