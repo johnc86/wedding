@@ -18,7 +18,7 @@ $introsize: 100%;
         @include core.abscenter();
 
         fill: col.$c-white;
-        width: 90%;
+        width: 50%;
 
         animation-name: colshift, fadeout;
         animation-duration: 2s, 1s;
@@ -56,6 +56,10 @@ $introsize: 100%;
             font-size: 5vw;
             top: calc(50% - 35vw);
 
+        }
+
+        &__logo {
+            width: 90%;
         }
     }
 }

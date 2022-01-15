@@ -323,7 +323,7 @@ h2 {
   top: 50%;
   left: 50%;
   fill: var(--c-white);
-  width: 90%;
+  width: 50%;
   animation-name: colshift, fadeout;
   animation-duration: 2s, 1s;
   animation-fill-mode: forwards, forwards;
@@ -356,6 +356,9 @@ h2 {
   .intro__text {
     font-size: 5vw;
     top: calc(50% - 35vw);
+  }
+  .intro__logo {
+    width: 90%;
   }
 }
 header, .header {
