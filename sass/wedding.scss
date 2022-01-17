@@ -12,12 +12,12 @@ main {
 }
 
 .content {
-    background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
+    background: #A0BEFE url(img/bg_portrait.png) no-repeat fixed center;
     display: none;
     min-height: 100vh;
 
         @media only screen and (min-width: core.$mobilebreak) {
-            background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
+            background: #A0BEFE url(img/bg_landscape.png) no-repeat fixed center;
         }
 
     &.visible {
