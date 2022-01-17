@@ -1,15 +1,14 @@
 @use '_core' as core;
 @import 'colour';
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap');
 $f-header: 'Comforter', cursive;
 $f-text: 'Bitter', serif;
-$f-number: Alegreya;
+$f-number: 'Alegreya', serif;
 $f-accent: 'Readex Pro', sans-serif;
 
-body, p {
+html, body, p {
     font-family: $f-text;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -33,7 +32,7 @@ h1, h2 {
 }
 
 h3, h4, h5, h6, .heading {
-    font-family: $f-header !important;
+    font-family: $f-header;
     color: $c-black;
     font-weight: 300;
     margin: 0;

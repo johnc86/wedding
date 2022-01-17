@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap");
 body {
   --c-transparent: hsla(0, 0%, 100%, 0);
   --c-white: hsl(0, 0%, 100%);
@@ -58,9 +58,9 @@ body {
   --c-bg: hsla(0, 0%, 100%, 40%);
 }
 
-body, p {
+html, body, p {
   font-family: "Bitter", serif;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -78,7 +78,7 @@ h1, h2 {
 }
 
 h3, h4, h5, h6, .heading {
-  font-family: "Comforter", cursive !important;
+  font-family: "Comforter", cursive;
   color: var(--c-black);
   font-weight: 300;
   margin: 0;
@@ -268,7 +268,7 @@ h2 {
     fill: var(--c-white);
   }
   100% {
-    fill: var(--c-secondary);
+    fill: var(--c-black);
   }
 }
 @keyframes hide {
@@ -314,7 +314,7 @@ h2 {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   z-index: 10;
 }
 .intro__logo {
@@ -361,100 +361,176 @@ h2 {
     width: 90%;
   }
 }
-header, .header {
-  display: flex;
-  padding: 0 0 0 0;
-  margin: 0 auto 1rem auto;
-  background: var(--c-bg);
-  width: 80%;
-  min-height: 10rem;
-}
-header--logospace, .header--logospace {
-  display: flex;
-  width: 16rem;
-}
-header--l, header--r, .header--l, .header--r {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-family: "Readex Pro", sans-serif;
-  font-size: 2rem;
-  color: var(--c-secondary);
-  padding: 1rem;
-  opacity: 0.6;
-  text-align: center;
-  animation-name: pulse;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-}
-header--r, .header--r {
-  animation-delay: 300ms;
-}
-
 .mjlogo {
-  fill: var(--c-secondary);
+  fill: var(--c-black);
   width: 20rem;
   margin: auto;
-  padding: 2rem 0 2rem 0;
 }
 
-@media only screen and (max-width: 940px) {
+header, .header {
+  margin: 2rem 2rem 0 2rem;
+  background: var(--c-bg);
+  padding-bottom: 5rem;
+  position: relative;
+}
+@media only screen and (min-width: 940px) {
   header, .header {
-    width: 90%;
-    flex-wrap: wrap;
-    padding-bottom: 1rem;
-  }
-  header > *, .header > * {
-    width: 100%;
-  }
-  header--logospace, .header--logospace {
-    order: -1;
-    width: 100%;
-  }
-  header--l, header--r, .header--l, .header--r {
-    font-size: 1.5rem;
-    padding: 0 1rem;
+    display: flex;
+    padding-bottom: 3rem;
   }
 }
+header__logo, .header__logo {
+  display: flex;
+  order: -1;
+  width: 100%;
+  margin-top: 2rem;
+}
+header__dateplace, .header__dateplace {
+  position: absolute;
+  right: -35%;
+}
+@media only screen and (min-width: 940px) {
+  header__dateplace, .header__dateplace {
+    right: 20%;
+    bottom: 0;
+  }
+}
+header__date, .header__date {
+  font-family: "Alegreya", serif;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  position: absolute;
+  top: -1rem;
+  left: 40%;
+  transform: translatex(-50%);
+}
+header__place, .header__place {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 40%;
+  transform: translatex(-50%);
+}
+
 main {
   min-height: 100vh;
 }
 
 .content {
-  background: #A0BEFE url(../img/finalframe.png) no-repeat fixed center;
-  background-size: 1920px 1080px;
+  background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
+  display: none;
   min-height: 100vh;
-  visibility: hidden;
+  overflow: hidden;
+}
+@media only screen and (min-width: 940px) {
+  .content {
+    background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
+  }
 }
 .content.visible {
-  visibility: visible;
+  display: flex;
+  flex-direction: column;
 }
 
 .inv {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 80%;
+  margin: 0 2rem 2rem 2rem;
+  padding: 1rem;
   background: var(--c-bg);
-  margin: auto;
 }
-.inv__content {
+.inv p {
+  text-align: center;
+}
+.inv h1 {
+  margin: 5rem 0 0 0;
+}
+.inv h2 {
+  text-align: center;
+  margin: 0;
+  font-family: "Bitter", serif;
+  color: var(--c-black);
+  font-size: 2rem;
+}
+.inv h3 {
+  text-align: center;
+  margin: -1ch;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 940px) {
+  .inv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .inv__drawing {
+    grid-row: span 2;
+  }
+}
+.inv__drawing {
+  width: 100%;
+}
+.inv__drawing img {
+  width: 150%;
+  margin-left: -25%;
+}
+@media only screen and (min-width: 940px) {
+  .inv__drawing img {
+    width: 100%;
+    margin: 0;
+  }
+}
+.inv__form {
+  border-left: 0.25rem solid var(--c-secondary);
+  margin: 0 -1rem;
+}
+.inv__form input:not(.inv__form--radio) {
+  border: 0;
+  width: 100%;
+  margin: 0.25rem 0;
+  height: 4rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, var(--c-white) 30%, rgba(255, 255, 255, 0) 100%);
+  color: var(--c-secondary);
+  font-family: "Bitter", serif;
+}
+.inv__form input:not(.inv__form--radio):focus {
+  background: var(--c-white);
+  border: none;
+  outline-width: 0;
+  outline: none;
+}
+.inv__form button {
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+  height: 3rem;
+  border: 0;
+  background: var(--c-secondary);
+  color: var(--c-white);
+  font-family: "Alegreya", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.inv__form button:hover {
+  background: var(--c-black);
+}
+.inv__form .inv__form--radio {
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
+  align-items: center;
+  margin: 0.5rem;
 }
-.inv__RSVP {
-  display: flex;
-}
-.inv__RSVP__form, .inv__RSVP__text {
-  width: 50%;
+.inv__form .inv__form--radio input {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
+  color: black;
 }
 
-@media only screen and (max-width: 940px) {
-  .inv {
-    width: 90%;
-  }
+.gmap {
+  width: calc(100% + 4rem);
+  margin: 1rem -2rem;
 }
 
 /*# sourceMappingURL=wedding.css.map */

@@ -46,8 +46,7 @@ jQuery(document).ready(function($){
             modalWindow.addClass('visible');
         }, delay);
     }
-    // setTimeout(animationOnLoad, 1)
-    setTimeout(animationOnLoad, 500)
+    
 
     function endAnimation() {
         mainPage.addClass('visible');
@@ -59,8 +58,10 @@ jQuery(document).ready(function($){
 		});
     }
 
-    // setTimeout(endAnimation, 2)
-    setTimeout(endAnimation, 7000)
-
+   
+    setTimeout(animationOnLoad, 1)
+    // setTimeout(animationOnLoad, 500)
+    setTimeout(endAnimation, 2)
+    // setTimeout(endAnimation, 7000)
     
 });

@@ -1,71 +1,59 @@
 
 @use '_core' as core;
 @use '_colour' as col;
-@use '_fonts';
-
-header, .header {
-    display: flex;
-    padding: 0 0 0 0;
-    margin: 0 auto 1rem auto;
-    background: col.$c-bg;
-    width: 80%;
-    min-height: 10rem;
-
-    &--logospace {
-        display:flex;
-        width: 16rem;
-        // background: red;
-        // padding-bottom: 15rem;
-    }
-
-    &--l, &--r {
-        display:flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        font-family: fonts.$f-accent;
-        font-size: 2rem;
-        color: col.$c-secondary;
-        padding: 1rem;
-        opacity: 0.6;
-        text-align: center;
-
-        animation-name: pulse;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-
-    &--r { animation-delay: 300ms }
-}
+@use '_fonts' as f;
 
 .mjlogo {
-    fill: col.$c-secondary;
+    fill: col.$c-black;
     width: 20rem;
     margin: auto;
-    padding: 2rem 0 2rem 0;
+    // padding: 2rem 0 6rem 0;
 }
 
-@media only screen and (max-width: core.$mobilebreak) {
-    header, .header {
-        width: 90%;
-        flex-wrap: wrap;
-        padding-bottom: 1rem;
+header, .header {
+    margin: 2rem 2rem 0 2rem;
+    background: col.$c-bg;
+    padding-bottom: 5rem;
+    position: relative;
 
-        >*{
-            width: 100%;
-            
-        }
+    @media only screen and (min-width: core.$mobilebreak) {
+        display: flex;
+        padding-bottom: 3rem;
 
-        &--logospace {
-            order: -1;
-            width: 100%;
-            // margin-bottom: 1rem;
-        }
+    }
 
-        &--l, &--r {
-            font-size: 1.5rem;
-            padding: 0 1rem;
-            // background: col.$c-primary;
+    &__logo {
+        display:flex;
+        order: -1;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    &__dateplace {
+        position: absolute;
+        right: -35%;
+        // margin-top: 2rem;
+        @media only screen and (min-width: core.$mobilebreak) {
+            right: 20%;
+            bottom: 0;
         }
     }
+    &__date {
+        font-family: f.$f-number;
+        font-weight: 600;
+        font-size: 3rem;
+        text-align: center;
+        position: absolute;
+        top: -1rem;
+        left: 40%;
+        transform: translatex(-50%)
+    }
+    &__place {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 2rem;
+        left: 40%;
+        transform: translatex(-50%)
+    }
+
 }

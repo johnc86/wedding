@@ -1,5 +1,5 @@
 @use '_colour' as col;
-@use '_fonts';
+@use '_fonts' as f;
 
 @use '_ink-modal';
 @use '_animations';
@@ -12,47 +12,151 @@ main {
 }
 
 .content {
-    background: #A0BEFE url(../img/finalframe.png) no-repeat fixed center;
-    background-size: 1920px 1080px;
+    background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
+    display: none;
     min-height: 100vh;
-    visibility: hidden;
 
+        @media only screen and (min-width: core.$mobilebreak) {
+            background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
+        }
 
     &.visible {
-        visibility: visible;
+        display: flex;
+        flex-direction: column;
     }
+    
+    overflow: hidden;
 }
 
 .inv {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 80%;
+    margin: 0 2rem 2rem 2rem;
+    padding: 1rem;
     background: col.$c-bg;
-    margin: auto;
 
-    &__content {
-        // margin-top: 7rem;
-        display:flex;
-        flex-direction: column;
-        padding: 2rem;
+    & p {
+        text-align: center;
     }
 
-    &__RSVP {
-        display:flex;
+    & h1 {
+        margin: 5rem 0 0 0;
+    }
 
-        &__form, &__text {
-            width: 50%;
+    & h2 {
+        text-align: center;
+        margin: 0;
+        font-family: f.$f-text;
+        color: col.$c-black;
+        font-size: 2rem;
+    }
+
+    & h3 {
+        text-align: center;
+        margin: -1ch;
+        font-size: 2rem;
+        
+
+    }
+    
+    @media only screen and (min-width: core.$mobilebreak) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__intro {
+
+        }
+        &__drawing {
+            grid-row: span 2;
+        }
+        &__rsvp {
+            
+        }
+        &__location {
+            
+        }
+        &__plan {
+            
+        }
+        &__polishwedding {
+            
+        }
+
+    }
+
+
+    &__drawing {
+        width: 100%;
+        & img {
+            width: 150%;
+            margin-left: -25%;
+            @media only screen and (min-width: core.$mobilebreak) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    &__form {
+
+        border-left: 0.25rem solid col.$c-secondary;
+        margin: 0 -1rem;
+
+        & input:not(.inv__form--radio) {
+            border: 0;
+            // width: calc(100% + 2rem);
+            // margin: 0.5rem -1rem;
+            width: 100%;
+            margin: 0.25rem 0;
+            height: 4rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+            background: linear-gradient(90deg, col.$c-white 30%, rgba(255,255,255,0) 100%);
+            color: col.$c-secondary;
+            font-family: f.$f-text;
+
+            &:focus {
+                background: col.$c-white;
+                border: none;
+                outline-width: 0;
+                outline: none;
+            }
+        }
+
+        & button {
+            // width: calc(100% + 2rem);
+            // margin: 0.5rem -1rem 0 -1rem;
+            margin: 0.5rem 0 0 0;
+            width: 100%;
+            height: 3rem;
+            border: 0;
+            background: col.$c-secondary;
+            color: col.$c-white;
+            font-family: f.$f-number;
+            font-weight: 600;
+            font-size: 1.5rem;
+            &:hover {
+                background: col.$c-black;
+            }
+        }
+
+        & .inv__form--radio {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem;
+
+            & input {
+                height: 2rem;
+                width: 2rem;
+                margin: 0 1rem;
+                color: black;
+            }
         }
     }
 }
 
-@media only screen and (max-width: core.$mobilebreak) {
-    .inv {
-        width: 90%;
-
-        &__content {
-            // padding: 1rem;
-        }
-    }
+.gmap {
+    width: calc(100% + 4rem);
+    margin: 1rem -2rem;
 }
