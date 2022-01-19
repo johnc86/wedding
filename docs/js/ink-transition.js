@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 	var transitionLayer = $('.cd-transition-layer'),
 		transitionBackground = transitionLayer.children(),
 		modalWindow = $('.cd-modal');
-        mainPage = $('.content');
+        mainPage = $('.content--intro');
 
 	var frameProportion = 1.78, //png frame aspect ratio
 		frames = 25, //number of png frames
@@ -59,9 +59,9 @@ jQuery(document).ready(function($){
     }
 
    
-    setTimeout(animationOnLoad, 1)
-    // setTimeout(animationOnLoad, 500)
-    setTimeout(endAnimation, 2)
+    // setTimeout(animationOnLoad, 1)
+    setTimeout(animationOnLoad, 500)
+    // setTimeout(endAnimation, 2)
     // setTimeout(endAnimation, 7000)
     
 });

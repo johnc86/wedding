@@ -127,7 +127,6 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -2;
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -156,7 +155,7 @@ h2 {
 .cd-transition-layer.opening .bg-layer {
   -webkit-animation: cd-sequence 0.8s steps(24);
   -moz-animation: cd-sequence 0.8s steps(24);
-  animation: cd-sequence 0.8s steps(24);
+  animation: cd-sequence 3s steps(24);
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -417,20 +416,24 @@ main {
   min-height: 100vh;
 }
 
-.content {
-  background: #A0BEFE url(img/bg_portrait.png) no-repeat fixed center;
-  display: none;
+.content, .content--intro {
+  display: flex;
+  flex-direction: column;
+  background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
   min-height: 100vh;
   overflow: hidden;
 }
 @media only screen and (min-width: 940px) {
-  .content {
-    background: #A0BEFE url(img/bg_landscape.png) no-repeat fixed center;
+  .content, .content--intro {
+    background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
   }
 }
-.content.visible {
+.content.visible, .visible.content--intro {
   display: flex;
   flex-direction: column;
+}
+.content--intro {
+  display: none;
 }
 
 .inv {

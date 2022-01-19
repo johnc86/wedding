@@ -1,88 +1,50 @@
 <div class="inv">
     <div class="inv__intro">
-        <p style="margin-bottom:0;">
-            You are invited to the wedding of</p>
-            <h2>Maja Lorkowska</h2><h3>&</h3><h2>John Callaghan.</h2>
-        <p>
-            The ceremony will take place at 17:00, in <b>Kościół Wniebowstąpienia Pańskiego, ul. Atolowa 6, Osowa Góra, 85-435</b>.
-        </p>
-        <p>
-            The party will take place at <b>Dwór Hulanka, ul. Grunwaldzka 309, 85-438 Bydgoszcz.</b>
-        </p>
-        <p>More information is provided below, so please take a look and if you have any questions please just let us know.</p>
+        {% if en %}
+            {% include en_intro.md %}
+        {% endif %}
+        {% if pl %}
+            {% include pl_intro.md %}
+        {% endif %}
     </div>
 
     <div class="inv__drawing">
-        <img src="img/drawing_export.svg">
+        <img src="../img/drawing_export.svg">
     </div>
 
     <div class="inv__rsvp">
-        <h1>RSVP</h1>
-        <div class="inv__RSVP__text">
-            <p>We hope that you can join us on this special day. With the challenges of planning an international wedding during a pandemic, we ask that you please R.S.V.P as soon as possible so we can have a good idea of how many people will be attending.</p>
-        </div>
-
-        <div class="inv__form">
-            <form action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
-                <div class="inv__form--radio">
-                    <input type="radio" id="respondyes" name="response" value="true" >
-                    <label for="respondyes">I'll be there</label>
-                </div>
-                <div class="inv__form--radio">
-                    <input type="radio" id="respondno" name="response" value="false" >
-                    <label for="respondno">I can't make it</label>
-                </div>
-                
-                <input type="email" name="email" placeholder="Your Email Address">
-                <input type="text" name="name" placeholder="Your Name">
-                <input type="text" name="food" placeholder="Dietary Requirements">
-                <input type="text" name="plusone" placeholder="Will you be bringing anyone?">
-                <br>
-                
-                <button>Submit</button>
-                <div style="position: absolute; left: -5000px;">
-                    <input type="checkbox" name="grandmas_peach_paisley_flounder" value="1" tabindex="-1" autocomplete="no">
-                </div>
-            </form>
-        </div>
-
+        {% if en %}
+            {% include en_rsvp.md %}
+        {% endif %}
+        {% if pl %}
+            {% include pl_rsvp.md %}
+        {% endif %}
     </div>
     
     <div class="inv__location">
-        <h1>Location</h1>
-        <p>The wedding will take place in Maja's hometown Bydgoszcz. Bydgoszcz is a small city in central Poland.</p>
-        <iframe class="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76612.23537502353!2d17.968143079605596!3d53.12576961034115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47031386764ebd6f%3A0xe49ee48c4b65f30e!2sBydgoszcz%2C%20Poland!5e0!3m2!1sen!2suk!4v1642445826094!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-        <h2>The Church</h2>
-        <p>The church is right in the heart of Bydgoszcz so it'll be nice and easy to get to for anybody staying in the city.
-        </p>
-
-        <h2>The Party</h2>
-        <p>You'll be drinking lots of Vodka, start preparing your body</p>
+        {% if en %}
+            {% include en_location.md %}
+        {% endif %}
+        {% if pl %}
+            {% include pl_location.md %}
+        {% endif %}
     </div>
 
     <div class="inv__plan">
-        <h1>Plan your trip</h1>
-        <p>Things are hard to plan these days, but to help you figure things out we've pulled together the most obvious ways to fly and places to stay to help you get started.</p>
-
-        <h2>Flights</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, architecto quam voluptatum, ratione possimus quidem illo nesciunt beatae dolorum ab odit vel minus. Minima eligendi maxime obcaecati natus harum dolore?
-        Soluta numquam atque ullam harum possimus natus eligendi nesciunt molestias repudiandae distinctio dolores molestiae odit nostrum ea quo alias, expedita, at tempore quia. Nam hic architecto blanditiis est, tempore optio.</p>
-
-        <h2>Hotels</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, architecto quam voluptatum, ratione possimus quidem illo nesciunt beatae dolorum ab odit vel minus. Minima eligendi maxime obcaecati natus harum dolore?
-        Soluta numquam atque ullam harum possimus natus eligendi nesciunt molestias repudiandae distinctio dolores molestiae odit nostrum ea quo alias, expedita, at tempore quia. Nam hic architecto blanditiis est, tempore optio.</p>
-
-        <h2>Things to do</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, architecto quam voluptatum, ratione possimus quidem illo nesciunt beatae dolorum ab odit vel minus. Minima eligendi maxime obcaecati natus harum dolore?
-        Soluta numquam atque ullam harum possimus natus eligendi nesciunt molestias repudiandae distinctio dolores molestiae odit nostrum ea quo alias, expedita, at tempore quia. Nam hic architecto blanditiis est, tempore optio.</p>
+        {% if en %}
+            {% include en_plan.md %}
+        {% endif %}
+        {% if pl %}
+            {% include pl_plan.md %}
+        {% endif %}
     </div>
 
-    <div class="inv__polishwedding">
-        <h1>What to Expect</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam recusandae eum eveniet totam voluptatem quia a, tempora fugit quisquam quod tenetur blanditiis placeat suscipit enim incidunt sit corrupti, voluptas soluta!
-        Tempora architecto, hic enim distinctio cum commodi expedita suscipit tempore, veritatis maxime atque vitae voluptatum illum reprehenderit eius laudantium vero obcaecati optio adipisci doloremque nemo iure necessitatibus. Eveniet, dolor culpa.
-        Voluptatum, aut. Ipsum, quae obcaecati eius quod quisquam, laboriosam delectus excepturi possimus quia dicta eos impedit cumque? Suscipit dolore quisquam eaque distinctio dolorem temporibus fugit doloribus voluptatum tenetur, officiis maxime.</p>
+    <div class="inv__expect">
+        {% if en %}
+            {% include en_expect.md %}
+        {% endif %}
+        {% if pl %}
+            {% include pl_expect.md %}
+        {% endif %}
     </div>
-    
 </div>

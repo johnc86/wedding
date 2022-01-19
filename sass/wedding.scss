@@ -12,12 +12,14 @@ main {
 }
 
 .content {
-    background: #A0BEFE url(img/bg_portrait.png) no-repeat fixed center;
-    display: none;
+    display: flex;
+    flex-direction: column;
+
+    background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
     min-height: 100vh;
 
         @media only screen and (min-width: core.$mobilebreak) {
-            background: #A0BEFE url(img/bg_landscape.png) no-repeat fixed center;
+            background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
         }
 
     &.visible {
@@ -26,6 +28,12 @@ main {
     }
     
     overflow: hidden;
+
+    &--intro {
+        @extend .content;
+        display: none;
+        // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(117,0,0,1) 100%);
+    }
 }
 
 .inv {
