@@ -386,7 +386,7 @@ header__logo, .header__logo {
 }
 header__dateplace, .header__dateplace {
   position: absolute;
-  right: -35%;
+  right: 0;
 }
 @media only screen and (min-width: 940px) {
   header__dateplace, .header__dateplace {

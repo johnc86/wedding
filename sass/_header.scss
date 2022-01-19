@@ -31,7 +31,7 @@ header, .header {
 
     &__dateplace {
         position: absolute;
-        right: -35%;
+        right: 0;
         // margin-top: 2rem;
         @media only screen and (min-width: core.$mobilebreak) {
             right: 20%;
