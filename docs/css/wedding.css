@@ -367,16 +367,11 @@ h2 {
 }
 
 header, .header {
+  display: flex;
   margin: 2rem 2rem 0 2rem;
   background: var(--c-bg);
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   position: relative;
-}
-@media only screen and (min-width: 940px) {
-  header, .header {
-    display: flex;
-    padding-bottom: 3rem;
-  }
 }
 header__logo, .header__logo {
   display: flex;
@@ -386,13 +381,9 @@ header__logo, .header__logo {
 }
 header__dateplace, .header__dateplace {
   position: absolute;
-  right: 0;
-}
-@media only screen and (min-width: 940px) {
-  header__dateplace, .header__dateplace {
-    right: 20%;
-    bottom: 0;
-  }
+  left: 50%;
+  transform: translateX(-20%);
+  bottom: 0;
 }
 header__date, .header__date {
   font-family: "Alegreya", serif;
