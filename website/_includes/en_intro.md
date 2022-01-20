@@ -6,7 +6,7 @@
     The ceremony will take place at 17:00, in <b>Kościół Wniebowstąpienia Pańskiego, ul. Atolowa 6, Osowa Góra, 85-435</b>.
 </p>
 <p>
-    The party will take place at <b>Dwór Hulanka, ul. Grunwaldzka 309, 85-438 Bydgoszcz.</b>
+    The party will take place at <b>Dwór Hulanka, Pawłówek 6, 85-438 Bydgoszcz.</b>
 </p>
 <p>
     More information is provided below, so please take a look and if you have any questions please just let us know.

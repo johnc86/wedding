@@ -7,6 +7,8 @@ $c-black: var(--c-black);
 $c-primary: var(--c-primary);
 $c-secondary: var(--c-secondary);
 $c-bg: var(--c-bg);
+$c-bg2: var(--c-secondaryalpha);
+
 
 // Define actual colours as CSS variables:
 body {
@@ -19,4 +21,5 @@ body {
     --c-primary:        hsl(221, 100%, 80%);
     --c-secondary:      hsl(0, 100%, 23%);
     --c-bg:             hsla(0, 0%, 100%, 40%);
+    --c-secondaryalpha: hsla(0, 100%, 23%, 20%);
 }

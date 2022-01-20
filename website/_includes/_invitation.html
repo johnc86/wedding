@@ -8,8 +8,13 @@
         {% endif %}
     </div>
 
-    <div class="inv__drawing">
-        <img src="../img/drawing_export.svg">
+    <div class="inv__drawing" style="position: relative;">
+        <img class="bgimg_3" src="../img/wedgblue/element6.png">
+        <img class="bgimg_5" src="../img/wedgblue/element11.png">
+        <img class="bgimg_4" src="../img/white/element12.png">
+        <img class="bgimg" src="../img/smudge1.png" style="top: 0; left: 10%;">
+
+        <img src="../img/drawing_export.svg" style="position: relative;">
     </div>
 
     <div class="inv__rsvp">
@@ -22,29 +27,26 @@
     </div>
     
     <div class="inv__location">
-        {% if en %}
-            {% include en_location.md %}
-        {% endif %}
-        {% if pl %}
-            {% include pl_location.md %}
-        {% endif %}
+        <img class="bgimg_6" src="../img/white/element11.png">
+        <img class="bgimg_7" src="../img/white/element1.png">
+        <div class="zindexup">
+            {% if en %}
+                {% include en_location.md %}
+            {% endif %}
+            {% if pl %}
+                {% include pl_location.md %}
+            {% endif %}
+        </div>
     </div>
 
     <div class="inv__plan">
-        {% if en %}
-            {% include en_plan.md %}
-        {% endif %}
-        {% if pl %}
-            {% include pl_plan.md %}
-        {% endif %}
-    </div>
-
-    <div class="inv__expect">
-        {% if en %}
-            {% include en_expect.md %}
-        {% endif %}
-        {% if pl %}
-            {% include pl_expect.md %}
-        {% endif %}
+        <div class="zindexup">
+            {% if en %}
+                {% include en_plan.md %}
+            {% endif %}
+            {% if pl %}
+                {% include pl_plan.md %}
+            {% endif %}
+        </div>
     </div>
 </div>

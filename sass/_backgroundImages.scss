@@ -1,0 +1,119 @@
+@use '_core' as core;
+
+.bgimg {
+    position: absolute;
+    z-index: 0;
+
+    &_1 {
+        @extend .bgimg;
+        top: -5rem; 
+        right: 0; 
+        width:10rem;
+        transform: rotate(90deg);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            width: 20rem;
+            top: -10rem; 
+
+        }
+    }
+
+    &_2 {
+        @extend .bgimg;
+        top: -5rem; 
+        left: -5rem; 
+        width:15rem;
+        transform: rotate(180deg);
+        transform: scaleX(-1);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            width: 20rem;
+            top: -10rem; 
+            left: -5rem;
+            transform: scaleY(-1);
+
+            transform: scaleX(1);
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &_3 {
+        @extend .bgimg;
+        top: 0; 
+        left: -50%; 
+        // width:15rem;
+        // transform: rotate(180deg);
+        // transform: scaleX(-1);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            // width: 20rem;
+            // top: -10rem; 
+            // left: -5rem;
+            // transform: scaleY(-1);
+
+            // transform: scaleX(1);
+            // transform: rotate(180deg);
+
+        }
+    }
+
+    &_4 {
+        @extend .bgimg;
+        top: -10rem; 
+        right: -3rem; 
+        // width:15rem;
+        transform: rotate(15deg);
+        // transform: scaleX(-1);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            // width: 20rem;
+            // top: -10rem; 
+            // left: -5rem;
+            // transform: scaleY(-1);
+
+            // transform: scaleX(1);
+            // transform: rotate(180deg);
+
+        }
+    }
+
+    &_5 {
+        @extend .bgimg;
+        bottom: -50%; 
+        right: 0; 
+        width: 5rem;
+        transform: rotate(90deg);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            right: -20rem;
+            bottom: -40%;
+        }
+    }
+    &_6 {
+        @extend .bgimg;
+        top: 0; 
+        left: 0; 
+        // width: 5rem;
+        // height: 20rem;
+        // transform: rotate(90deg);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+            left: 90%;
+            opacity: 0.5;
+        }
+    }
+    &_7 {
+        @extend .bgimg;
+        bottom: -50%; 
+        left: -50%; 
+        // width: 5rem;
+        // height: 20rem;
+        // transform: rotate(90deg);
+
+        @media only screen and (min-width: core.$mobilebreak) {
+
+        }
+    }
+}
+

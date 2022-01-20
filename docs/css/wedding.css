@@ -8,6 +8,7 @@ body {
   --c-primary: hsl(221, 100%, 80%);
   --c-secondary: hsl(0, 100%, 23%);
   --c-bg: hsla(0, 0%, 100%, 40%);
+  --c-secondaryalpha: hsla(0, 100%, 23%, 20%);
 }
 
 html, body {
@@ -56,6 +57,7 @@ body {
   --c-primary: hsl(221, 100%, 80%);
   --c-secondary: hsl(0, 100%, 23%);
   --c-bg: hsla(0, 0%, 100%, 40%);
+  --c-secondaryalpha: hsla(0, 100%, 23%, 20%);
 }
 
 html, body, p {
@@ -368,10 +370,18 @@ h2 {
 
 header, .header {
   display: flex;
-  margin: 2rem 2rem 0 2rem;
+  margin: 1rem;
+  margin-bottom: 0;
   background: var(--c-bg);
   padding-bottom: 6rem;
   position: relative;
+}
+@media only screen and (min-width: 940px) {
+  header, .header {
+    max-width: 940px;
+    width: 100%;
+    margin: 1rem auto;
+  }
 }
 header__logo, .header__logo {
   display: flex;
@@ -403,6 +413,74 @@ header__place, .header__place {
   transform: translatex(-50%);
 }
 
+.bgimg, .bgimg_7, .bgimg_6, .bgimg_5, .bgimg_4, .bgimg_3, .bgimg_2, .bgimg_1 {
+  position: absolute;
+  z-index: 0;
+}
+.bgimg_1 {
+  top: -5rem;
+  right: 0;
+  width: 10rem;
+  transform: rotate(90deg);
+}
+@media only screen and (min-width: 940px) {
+  .bgimg_1 {
+    width: 20rem;
+    top: -10rem;
+  }
+}
+.bgimg_2 {
+  top: -5rem;
+  left: -5rem;
+  width: 15rem;
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+}
+@media only screen and (min-width: 940px) {
+  .bgimg_2 {
+    width: 20rem;
+    top: -10rem;
+    left: -5rem;
+    transform: scaleY(-1);
+    transform: scaleX(1);
+    transform: rotate(180deg);
+  }
+}
+.bgimg_3 {
+  top: 0;
+  left: -50%;
+}
+.bgimg_4 {
+  top: -10rem;
+  right: -3rem;
+  transform: rotate(15deg);
+}
+.bgimg_5 {
+  bottom: -50%;
+  right: 0;
+  width: 5rem;
+  transform: rotate(90deg);
+}
+@media only screen and (min-width: 940px) {
+  .bgimg_5 {
+    right: -20rem;
+    bottom: -40%;
+  }
+}
+.bgimg_6 {
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 940px) {
+  .bgimg_6 {
+    left: 90%;
+    opacity: 0.5;
+  }
+}
+.bgimg_7 {
+  bottom: -50%;
+  left: -50%;
+}
 main {
   min-height: 100vh;
 }
@@ -431,9 +509,18 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 2rem 2rem 2rem;
+  margin: 1rem;
   padding: 1rem;
   background: var(--c-bg);
+}
+@media only screen and (min-width: 940px) {
+  .inv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 940px;
+    margin: 1rem auto;
+  }
 }
 .inv p {
   text-align: center;
@@ -453,27 +540,85 @@ main {
   margin: -1ch;
   font-size: 2rem;
 }
+.inv__img {
+  display: flex;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.inv__img > * {
+  max-width: 470px;
+  margin: auto;
+}
 @media only screen and (min-width: 940px) {
-  .inv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .inv__img {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
-  .inv__drawing {
-    grid-row: span 2;
+}
+.inv__img > * {
+  border: solid 0.25rem var(--c-secondary);
+}
+@media only screen and (min-width: 940px) {
+  .inv__intro {
+    margin: auto;
   }
 }
 .inv__drawing {
   width: 100%;
+  display: flex;
 }
 .inv__drawing img {
-  width: 150%;
-  margin-left: -25%;
+  width: 120%;
+  margin-left: -5%;
 }
 @media only screen and (min-width: 940px) {
   .inv__drawing img {
     width: 100%;
     margin: 0;
+    margin-bottom: auto;
   }
+}
+.inv__rsvp {
+  z-index: 3;
+  grid-column: span 2;
+}
+.inv__location {
+  position: relative;
+}
+.inv__location__map {
+  margin-bottom: 1rem;
+  display: flex;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  position: relative;
+}
+.inv__location__map > * {
+  max-width: 470px;
+  margin: auto;
+}
+@media only screen and (min-width: 940px) {
+  .inv__location__map {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.inv__location__map img {
+  border: solid 0.25rem var(--c-secondary);
+}
+.inv__location__map span {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--c-secondary);
+  color: var(--c-white);
+  opacity: 80%;
 }
 .inv__form {
   border-left: 0.25rem solid var(--c-secondary);
@@ -482,7 +627,7 @@ main {
 .inv__form input:not(.inv__form--radio) {
   border: 0;
   width: 100%;
-  margin: 0.25rem 0;
+  margin: 0.1rem 0;
   height: 4rem;
   padding: 0.5rem;
   font-size: 1rem;
@@ -496,8 +641,11 @@ main {
   outline-width: 0;
   outline: none;
 }
+.inv__form input:last-of-type {
+  margin-bottom: 0;
+}
 .inv__form button {
-  margin: 0.5rem 0 0 0;
+  margin: 0 0 0 0;
   width: 100%;
   height: 3rem;
   border: 0;
@@ -522,9 +670,81 @@ main {
   color: black;
 }
 
-.gmap {
-  width: calc(100% + 4rem);
-  margin: 1rem -2rem;
+.map-pin {
+  background: var(--c-secondaryalpha);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  position: relative;
+}
+@media only screen and (min-width: 940px) {
+  .map-pin {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.map-pin p {
+  padding: 0.5rem 1rem;
+  margin-right: 3rem;
+  text-align: left;
+}
+.map-pin p::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: url("../img/mappin.svg") no-repeat;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stretchlink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.expando {
+  background: var(--c-bg);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+@media only screen and (min-width: 940px) {
+  .expando {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.expando__summary {
+  list-style: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.expando__summary::-webkit-details-marker {
+  display: none;
+}
+.expando__all, .expando__all p {
+  text-align: left;
+}
+
+.zindexup {
+  position: relative;
+  z-index: 3;
+}
+
+.maxwidth {
+  max-width: 470px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=wedding.css.map */

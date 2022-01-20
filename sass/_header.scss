@@ -12,10 +12,17 @@
 
 header, .header {
     display: flex;
-    margin: 2rem 2rem 0 2rem;
+    margin: 1rem;
+    margin-bottom:0;
     background: col.$c-bg;
     padding-bottom: 6rem;
     position: relative;
+    
+    @media only screen and (min-width: core.$mobilebreak) {
+        max-width: core.$pagewidth;
+        width: 100%;
+        margin: 1rem auto;
+    }
 
     &__logo {
         display:flex;
