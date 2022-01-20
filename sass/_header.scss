@@ -11,16 +11,11 @@
 }
 
 header, .header {
+    display: flex;
     margin: 2rem 2rem 0 2rem;
     background: col.$c-bg;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     position: relative;
-
-    @media only screen and (min-width: core.$mobilebreak) {
-        display: flex;
-        padding-bottom: 3rem;
-
-    }
 
     &__logo {
         display:flex;
@@ -31,12 +26,10 @@ header, .header {
 
     &__dateplace {
         position: absolute;
-        right: 0;
-        // margin-top: 2rem;
-        @media only screen and (min-width: core.$mobilebreak) {
-            right: 20%;
-            bottom: 0;
-        }
+        left: 50%;
+        transform: translateX(-20%);
+        bottom: 0;
+
     }
     &__date {
         font-family: f.$f-number;
