@@ -1,14 +1,5 @@
 @use '_colour' as col;
 
-@keyframes cd-sequence {
-    0% {
-        -webkit-transform: translateY(-50%) translateX(-2%);
-    }
-    100% {
-        -webkit-transform: translateY(-50%) translateX(-98%);
-    }
-}
-
 @keyframes fadein {
     0% { opacity: 0; }
     100% { opacity: 1 };
@@ -30,41 +21,16 @@
     }
 }
 
-@keyframes pulse {
-    0% { opacity: 0.6 }
-    10% { opacity: 1 }
-    20% { opacity: 0.6 }
-    100% { opacity: 0.6 }
-}
-
-.paintbg {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: paint 5s ease-in-out 5s forwards;
-}
-
-.paintbg:nth-of-type(2) {
-    animation-delay: 2s;
-}
-
-@keyframes paint {
-    from {
-        stroke-dashoffset: 1; 
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-
-
+$introlen: 5s;
 
 .cssintro {
+    display:flex;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     position: relative;
-    // background: red;
+    // background: grey;
+    visibility: hidden;
 
     & .paint {
         position: absolute;
@@ -72,9 +38,98 @@
         width: 30rem;
     }
 
-    // @for $i from 1 through 20 {
-    //     .paint_#{$i} {
-    //         left: 5rem * $i;
-    //     }
-    // }
+    & .mjlogo {
+        fill: white;
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        animation: fadeout;
+        animation-delay: $introlen;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    & .flags {
+        display: flex;
+        margin: auto;
+        z-index: 101;
+        position: relative;
+        animation: fadein;
+        animation-delay: $introlen;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+        &__container {
+            width: 8rem;
+            height: 5rem;
+            overflow: hidden;
+            position: relative;
+            margin: 1rem;
+
+            & img {
+                width: 10rem;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+
+$ncirc: 2;
+$color: hsl(0, 100%, 23%);
+
+.spinner {
+  width: 100px;
+  height: 102px;
+  border-radius: 100%;
+  position: absolute;
+  top: 45%;
+  left: calc(50% - 50px);
+}
+    
+.circle{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  .inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 5px solid transparentize($color, 0.3);
+    border-right: none;
+    border-top: none;
+    background-clip: padding;
+    box-shadow: inset 0px 0px 10px transparentize($color, 0.85);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg); 
+}
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@for $i from 0 through $ncirc {
+  .circle:nth-of-type(#{$i}) {
+    transform: rotate($i * 70deg);
+
+    .inner {
+      animation: spin 2s infinite linear;
+    }
+  }
+}
+.spinner {
+  animation: spin 5s infinite linear;
 }
