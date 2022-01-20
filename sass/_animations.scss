@@ -55,3 +55,26 @@
         stroke-dashoffset: 0;
     }
 }
+
+
+
+
+.cssintro {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    // background: red;
+
+    & .paint {
+        position: absolute;
+        height: 30rem;
+        width: 30rem;
+    }
+
+    // @for $i from 1 through 20 {
+    //     .paint_#{$i} {
+    //         left: 5rem * $i;
+    //     }
+    // }
+}
