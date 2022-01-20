@@ -17,11 +17,6 @@ html, body {
   margin: 0;
   min-height: 100vh;
 }
-@media only screen and (max-width: 940px) {
-  html, body {
-    font-size: 14px;
-  }
-}
 
 body {
   display: flex;
@@ -38,13 +33,13 @@ body, p, h1, h2, h3, ul, li {
 }
 
 .container {
-  max-width: 940px;
-  margin: 0 auto 0 auto;
-  width: clamp(16rem, 90vw, 70rem);
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
 }
-@media only screen and (max-width: 940px) {
+@media only screen and (min-width: 940px) {
   .container {
-    margin: 0 1rem;
+    margin-left: 20%;
   }
 }
 
@@ -376,13 +371,6 @@ header, .header {
   padding-bottom: 6rem;
   position: relative;
 }
-@media only screen and (min-width: 940px) {
-  header, .header {
-    max-width: 940px;
-    width: 100%;
-    margin: 1rem auto;
-  }
-}
 header__logo, .header__logo {
   display: flex;
   order: -1;
@@ -406,16 +394,16 @@ header__date, .header__date {
   transform: translatex(-50%);
 }
 header__place, .header__place {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   position: absolute;
-  top: 2rem;
+  top: 2.4rem;
   left: 40%;
   transform: translatex(-50%);
 }
 
-.bgimg, .bgimg_7, .bgimg_6, .bgimg_5, .bgimg_4, .bgimg_3, .bgimg_2, .bgimg_1 {
+.bgimg, .bgimg_11, .bgimg_10, .bgimg_9, .bgimg_8, .bgimg_7, .bgimg_6, .bgimg_5, .bgimg_4, .bgimg_3, .bgimg_2, .bgimg_1 {
   position: absolute;
-  z-index: 0;
+  z-index: 5;
 }
 .bgimg_1 {
   top: -5rem;
@@ -423,64 +411,102 @@ header__place, .header__place {
   width: 10rem;
   transform: rotate(90deg);
 }
-@media only screen and (min-width: 940px) {
-  .bgimg_1 {
-    width: 20rem;
-    top: -10rem;
-  }
-}
 .bgimg_2 {
   top: -5rem;
-  left: -5rem;
+  left: -7rem;
   width: 15rem;
   transform: rotate(180deg);
   transform: scaleX(-1);
 }
-@media only screen and (min-width: 940px) {
-  .bgimg_2 {
-    width: 20rem;
-    top: -10rem;
-    left: -5rem;
-    transform: scaleY(-1);
-    transform: scaleX(1);
-    transform: rotate(180deg);
-  }
-}
 .bgimg_3 {
+  width: 20rem;
+  right: -5rem;
+  top: 10rem;
+}
+.bgimg_4 {
+  width: 20rem;
+  left: -10rem;
+}
+.bgimg_5 {
+  height: 20rem;
+  top: -2rem;
+  right: -4rem;
+  transform: scaleX(-1);
+}
+.bgimg_6 {
+  top: 0;
+  left: -10rem;
+  width: 20rem;
+  transform: rotate(-30deg);
+}
+.bgimg_7 {
+  top: 0;
+  left: 0;
+  height: 40rem;
+  transform: rotate(90deg);
+}
+.bgimg_8 {
+  bottom: -18rem;
+  left: 0;
+  height: 50rem;
+  transform: rotate(90deg);
+}
+.bgimg_9 {
+  top: 12rem;
+  left: 5rem;
+  height: 30rem;
+  width: 10rem;
+  transform: rotate(90deg);
+}
+.bgimg_10 {
+  bottom: -15rem;
+  left: -10rem;
+  height: 50rem;
+}
+.bgimg_11 {
+  top: 0;
+  right: -10rem;
+  height: 50rem;
+}
+
+.drawing, .drawing_5, .drawing_4, .drawing_3, .drawing_1 {
+  position: absolute;
+  z-index: 1;
+}
+.drawing_1 {
+  top: 0;
+  left: 10%;
+}
+.drawing_3 {
   top: 0;
   left: -50%;
 }
-.bgimg_4 {
+.drawing_4 {
   top: -10rem;
   right: -3rem;
   transform: rotate(15deg);
 }
-.bgimg_5 {
+.drawing_5 {
   bottom: -50%;
   right: 0;
   width: 5rem;
   transform: rotate(90deg);
 }
-@media only screen and (min-width: 940px) {
-  .bgimg_5 {
-    right: -20rem;
-    bottom: -40%;
+
+.wider {
+  display: flex;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  border: solid 0.25rem var(--c-secondary);
+}
+@media only screen and (max-width: 450px) {
+  .wider {
+    border-left: none;
+    border-right: none;
   }
 }
-.bgimg_6 {
-  top: 0;
-  left: 0;
-}
-@media only screen and (min-width: 940px) {
-  .bgimg_6 {
-    left: 90%;
-    opacity: 0.5;
-  }
-}
-.bgimg_7 {
-  bottom: -50%;
-  left: -50%;
-}
+
 main {
   min-height: 100vh;
 }
@@ -507,20 +533,16 @@ main {
 
 .inv {
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 100%;
   margin: 1rem;
   padding: 1rem;
   background: var(--c-bg);
+  z-index: 2;
 }
-@media only screen and (min-width: 940px) {
-  .inv {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    max-width: 940px;
-    margin: 1rem auto;
-  }
+.inv > * {
+  position: relative;
 }
 .inv p {
   text-align: center;
@@ -540,76 +562,9 @@ main {
   margin: -1ch;
   font-size: 2rem;
 }
-.inv__img {
-  display: flex;
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-  margin-right: -2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.inv__img > * {
-  max-width: 470px;
-  margin: auto;
-}
-@media only screen and (min-width: 940px) {
-  .inv__img {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.inv__img > * {
-  border: solid 0.25rem var(--c-secondary);
-}
-@media only screen and (min-width: 940px) {
-  .inv__intro {
-    margin: auto;
-  }
-}
-.inv__drawing {
-  width: 100%;
-  display: flex;
-}
-.inv__drawing img {
-  width: 120%;
-  margin-left: -5%;
-}
-@media only screen and (min-width: 940px) {
-  .inv__drawing img {
-    width: 100%;
-    margin: 0;
-    margin-bottom: auto;
-  }
-}
-.inv__rsvp {
-  z-index: 3;
-  grid-column: span 2;
-}
-.inv__location {
-  position: relative;
-}
 .inv__location__map {
   margin-bottom: 1rem;
-  display: flex;
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-  margin-right: -2rem;
   position: relative;
-}
-.inv__location__map > * {
-  max-width: 470px;
-  margin: auto;
-}
-@media only screen and (min-width: 940px) {
-  .inv__location__map {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.inv__location__map img {
-  border: solid 0.25rem var(--c-secondary);
 }
 .inv__location__map span {
   position: absolute;
@@ -670,6 +625,38 @@ main {
   color: black;
 }
 
+.inv > .inv__drawing {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.inv > .inv__drawing img {
+  width: 120%;
+  margin-left: -5%;
+}
+@media only screen and (min-width: 940px) {
+  .inv > .inv__drawing {
+    display: none;
+  }
+}
+
+.content > .inv__drawing, .content--intro > .inv__drawing {
+  display: flex;
+  position: fixed;
+  right: 0;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content > .inv__drawing img, .content--intro > .inv__drawing img {
+  width: 30vw;
+}
+@media only screen and (max-width: 940px) {
+  .content > .inv__drawing, .content--intro > .inv__drawing {
+    display: none;
+  }
+}
+
 .map-pin {
   background: var(--c-secondaryalpha);
   width: calc(100% + 2rem);
@@ -677,15 +664,8 @@ main {
   margin-right: -1rem;
   position: relative;
 }
-@media only screen and (min-width: 940px) {
-  .map-pin {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
 .map-pin p {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-right: 3rem;
   text-align: left;
 }
@@ -717,13 +697,6 @@ main {
   padding: 1rem;
   margin-bottom: 0.25rem;
 }
-@media only screen and (min-width: 940px) {
-  .expando {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
 .expando__summary {
   list-style: none;
   text-align: center;
@@ -739,7 +712,7 @@ main {
 
 .zindexup {
   position: relative;
-  z-index: 3;
+  z-index: 10;
 }
 
 .maxwidth {

@@ -16,10 +16,6 @@ html, body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-
-    @media only screen and (max-width: $pagewidth) {
-        font-size: 14px;
-    }
 }
 
 body {
@@ -38,11 +34,10 @@ body,p,h1,h2,h3,ul,li{
 }
 
 .container {
-    max-width: $pagewidth;
-    margin:0 auto 0 auto;
-    width: clamp(16rem, 90vw, 70rem);
-    
-    @media only screen and (max-width: $pagewidth) {
-        margin: 0 1rem;
+    max-width: $tinybreak;
+    width: 100%;
+    margin: auto;
+    @media only screen and (min-width: $mobilebreak) {
+        margin-left: 20%;
     }
 }

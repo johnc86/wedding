@@ -2,7 +2,7 @@
 
 .bgimg {
     position: absolute;
-    z-index: 0;
+    z-index: 5;
 
     &_1 {
         @extend .bgimg;
@@ -10,110 +10,107 @@
         right: 0; 
         width:10rem;
         transform: rotate(90deg);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            width: 20rem;
-            top: -10rem; 
-
-        }
     }
 
     &_2 {
         @extend .bgimg;
         top: -5rem; 
-        left: -5rem; 
+        left: -7rem; 
         width:15rem;
         transform: rotate(180deg);
         transform: scaleX(-1);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            width: 20rem;
-            top: -10rem; 
-            left: -5rem;
-            transform: scaleY(-1);
-
-            transform: scaleX(1);
-            transform: rotate(180deg);
-
-        }
     }
 
     &_3 {
         @extend .bgimg;
+        width: 20rem;
+        right: -5rem;
+        top: 10rem;
+    }
+    &_4 {
+        @extend .bgimg;
+        width: 20rem;
+        left: -10rem;
+    }
+    &_5 {
+        @extend .bgimg;
+        height: 20rem;
+        top: -2rem;
+        right: -4rem;
+        transform: scaleX(-1);
+    }
+
+    &_6 {
+        @extend .bgimg;
+        top: 0; 
+        left: -10rem; 
+        width: 20rem;
+        transform: rotate(-30deg);
+
+    }
+    &_7 {
+        @extend .bgimg;
+        top: 0; 
+        left: 0; 
+        height: 40rem;
+        transform: rotate(90deg);
+    }
+    &_8 {
+        @extend .bgimg;
+        bottom: -18rem; 
+        left: 0; 
+        height: 50rem;
+        transform: rotate(90deg);
+    }
+    &_9 {
+        @extend .bgimg;
+        top: 12rem; 
+        left: 5rem; 
+        height: 30rem;
+        width: 10rem;
+        transform: rotate(90deg);
+    }
+    &_10 {
+        @extend .bgimg;
+        bottom: -15rem; 
+        left: -10rem; 
+        height: 50rem;
+    }
+    &_11 {
+        @extend .bgimg;
+        top: 0; 
+        right: -10rem; 
+        height: 50rem;
+    }
+}
+
+.drawing {
+    position: absolute;
+    z-index: 1;
+
+    &_1 {
+        @extend .drawing;
+        top: 0; 
+        left: 10%;
+    }
+    &_3 {
+        @extend .drawing;
         top: 0; 
         left: -50%; 
-        // width:15rem;
-        // transform: rotate(180deg);
-        // transform: scaleX(-1);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            // width: 20rem;
-            // top: -10rem; 
-            // left: -5rem;
-            // transform: scaleY(-1);
-
-            // transform: scaleX(1);
-            // transform: rotate(180deg);
-
-        }
     }
 
     &_4 {
-        @extend .bgimg;
+        @extend .drawing;
         top: -10rem; 
         right: -3rem; 
-        // width:15rem;
         transform: rotate(15deg);
-        // transform: scaleX(-1);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            // width: 20rem;
-            // top: -10rem; 
-            // left: -5rem;
-            // transform: scaleY(-1);
-
-            // transform: scaleX(1);
-            // transform: rotate(180deg);
-
-        }
     }
 
     &_5 {
-        @extend .bgimg;
+        @extend .drawing;
         bottom: -50%; 
         right: 0; 
         width: 5rem;
         transform: rotate(90deg);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            right: -20rem;
-            bottom: -40%;
-        }
-    }
-    &_6 {
-        @extend .bgimg;
-        top: 0; 
-        left: 0; 
-        // width: 5rem;
-        // height: 20rem;
-        // transform: rotate(90deg);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-            left: 90%;
-            opacity: 0.5;
-        }
-    }
-    &_7 {
-        @extend .bgimg;
-        bottom: -50%; 
-        left: -50%; 
-        // width: 5rem;
-        // height: 20rem;
-        // transform: rotate(90deg);
-
-        @media only screen and (min-width: core.$mobilebreak) {
-
-        }
     }
 }
-

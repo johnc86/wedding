@@ -14,17 +14,20 @@
     width: calc(100% + 4rem);
     margin-left: -2rem;
     margin-right: -2rem;
-    
-    & > * {
-        max-width: math.div(core.$pagewidth,2);
-        margin: auto;
+}
+
+@mixin border {
+    border: solid 0.25rem col.$c-secondary;
+    @media only screen and (max-width: core.$tinybreak) {
+        border-left: none;
+        border-right: none;
     }
 
-    @media only screen and (min-width: core.$mobilebreak) {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
+}
+
+.wider {
+    @include wider;
+    @include border;
 }
 
 @mixin wide {
@@ -32,16 +35,10 @@
     margin-left: -1rem;
     margin-right: -1rem;
 
-    @media only screen and (min-width: core.$mobilebreak) {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
+
 }
 
-@mixin border {
-    border: solid 0.25rem col.$c-secondary;
-}
+
 
 main {
     min-height: 100vh;
@@ -50,9 +47,9 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-
     background: #A0BEFE url(../img/bg_portrait.png) no-repeat fixed center;
     min-height: 100vh;
+    overflow: hidden;
 
         @media only screen and (min-width: core.$mobilebreak) {
             background: #A0BEFE url(../img/bg_landscape.png) no-repeat fixed center;
@@ -63,29 +60,25 @@ main {
         flex-direction: column;
     }
     
-    overflow: hidden;
-
     &--intro {
         @extend .content;
         display: none;
-        // background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(117,0,0,1) 100%);
     }
 }
 
 .inv {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 100%;
     margin: 1rem;
     padding: 1rem;
     background: col.$c-bg;
+    z-index: 2;
 
-    @media only screen and (min-width: core.$mobilebreak) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-        max-width: core.$pagewidth;
-        margin: 1rem auto;
+
+    & > * {
+        position: relative;
     }
 
     & p {
@@ -109,67 +102,12 @@ main {
         margin: -1ch;
         font-size: 2rem;
     }
-    
-    &__img {
-        @include wider;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-
-        & > * {
-            @include border;
-
-        }
-    }
-
-
-    &__intro {
-        @media only screen and (min-width: core.$mobilebreak) {
-            margin: auto;
-        }
-    }
-
-    &__drawing {
-        width: 100%;
-        display: flex;
-        & img {
-            width: 120%;
-            margin-left: -5%;
-            
-            @media only screen and (min-width: core.$mobilebreak) {
-                width: 100%;
-                margin: 0;
-                margin-bottom:auto;
-            }
-        }
-        @media only screen and (min-width: core.$mobilebreak) {
-            // grid-row: span 2;
-        }
-    }
-
-    &__rsvp {
-        z-index:3;
-        grid-column: span 2;
-
-    }
 
     &__location {
-        position: relative;
-
-        &__content {
-           
-        }
-
         &__map {
             margin-bottom: 1rem;
-            @include wider;
             position: relative;
             
-
-            & img {
-                @include border;
-                // width: 100%;
-            }
-
             & span {
                 position: absolute;
                 bottom: 1rem;
@@ -178,24 +116,11 @@ main {
                 background: col.$c-secondary;
                 color: col.$c-white;
                 opacity: 80%;
-
             }
         }
     }
 
-    &__plan {
-        
-    }
-
-    &__polishwedding {
-        
-    }
-
-
-
-
     &__form {
-
         border-left: 0.25rem solid col.$c-secondary;
         margin: 0 -1rem;
 
@@ -256,6 +181,38 @@ main {
     }
 }
 
+// mobile version of drawing
+.inv > .inv__drawing {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    & img {
+        width: 120%;
+        margin-left: -5%;
+    }
+    @media only screen and (min-width: core.$mobilebreak) {
+        display: none;
+    }
+}
+
+// desktop version of drawing
+.content > .inv__drawing {
+    display: flex;
+    position: fixed;
+    right: 0;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & img {
+        width: 30vw;
+    }
+    @media only screen and (max-width: core.$mobilebreak) {
+        display: none;
+    }
+}
+
 .map-pin {
     background: col.$c-bg2;
     @include wide;
@@ -264,7 +221,7 @@ main {
 
 
     & p {
-        padding: 0.5rem 1rem; 
+        padding: 1rem 1rem; 
         margin-right: 3rem;
         text-align: left;
 
@@ -316,7 +273,7 @@ main {
 
 .zindexup {
     position: relative;
-    z-index:3;
+    z-index: 10;
 }
 
 .maxwidth {

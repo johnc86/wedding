@@ -3,9 +3,11 @@ layout: Master
 css: ../css/wedding.css
 en: true
 ---
-<div class="content" >
+<div class="content">
+    {% include drawing.html %}
 
-    {% include _header.html %}
-    
-    {% include _invitation.html %}
+    <div class="container"> 
+        {% include _header.html %}
+        {% include _invitation.html %}
+    </div>
 </div>
