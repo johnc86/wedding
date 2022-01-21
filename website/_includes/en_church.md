@@ -8,4 +8,4 @@
 <p>The ceremony itself will be very similar to an English Catholic wedding, just mostly spoken in Polish. There will be a translator for the vows so you should understand little bits, and obviously the priest is aware that half of the congregation isn't understanding what he is saying. Just stand when the Polish people stand, kneel when they kneel and admire the lovely church.
 </p>
 
-<img class="wider" src="../img/dance-crop.jpg">
+<img class="wider" src="{{assets}}img/dance-crop.jpg">

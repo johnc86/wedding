@@ -1,8 +1,11 @@
 ---
 layout: Master
-css: ../css/wedding.css
+assets: ../
 pl: true
 ---
+
+{% include _loader.html %}
+
 <div class="content">
     {% include drawing.html %}
 
@@ -11,3 +14,11 @@ pl: true
         {% include _invitation.html %}
     </div>
 </div>
+
+<script>
+document.addEventListener("readystatechange", function() {
+    if (document.readyState === "complete") {
+        loading.complete();
+    }
+});
+</script>

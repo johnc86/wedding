@@ -10,4 +10,4 @@
 <p>There is no bar, the alcohol is provided by us. So if you drink everythin on your table within 20 minutes you'll be getting a hangover by the end of the night. I know us Brits take wedding parties as a personal challenge, but the aim is to be still going strong by 4am so be sensible</p>
 <p>Throughout the night there will be various activities and games, there is a DJ and a translator - they're both experienced in doing Polish/English wedding parties, so everything will be made clear. But you will be encouraged to do some mingling with people you don't understand, so we'll provide some useful phrases to learn down below.</p>
 
-<img class="wider" src="../img/party.jpg">
+<img class="wider" src="{{assets}}img/party.jpg">

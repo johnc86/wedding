@@ -5,13 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03 09 22</title>
-
     <link rel="stylesheet" type="text/css" href="../css/wedding.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap" rel="stylesheet" crossorigin> 
+    <link rel="shortcut icon" type="image/jpg" href="../img/dancing.svg"/>
 </head>
 <body>
     <main>
-    <div class="content">
+    <div id="loader_splash" class="spinner__bg">
+    <div class="spinner">
+        <div class="circle">
+            <div class="inner"></div>
+        </div>
+        <div class="circle">
+            <div class="inner"></div>
+        </div>
+        <div class="circle">
+            <div class="inner"></div>
+        </div>
+        <div class="circle">
+            <div class="inner"></div>
+        </div>
+        <div class="circle">
+            <div class="inner"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="loader">You can't see this</div>
+
+<script src="../js/preload.js"></script>
+
+
+<div class="content">
     <div class="inv__drawing">
     <img class="drawing_3" src="../img/wedgblue/element6.png">
     <img class="drawing_5" src="../img/wedgblue/element11.png">
@@ -257,11 +286,49 @@
     </div>
 </div>
 
-    </div>
-</div>
-    <script src="js/jquery-2.1.4.js"></script>
-<script src="js/ink-transition.js"></script>
+<div id="flags" class="flags">
+    <a href="../pl/" onclick="saveLang('pl')">
+        <div class="flags__container">
+            <img src="../img/pl.svg" class="flags__pl" >
+        </div>
+    </a>
 
+    <a href="../en/" onclick="saveLang('en')">
+        <div class="flags__container">
+            <img src="../img/uk.svg" class="flags__en">
+        </div>
+    </a>
+</div>
+<script src="../js/locale.js"></script>
+
+    </div>
+    <div id="flags" class="flags">
+    <a href="../pl/" onclick="saveLang('pl')">
+        <div class="flags__container">
+            <img src="../img/pl.svg" class="flags__pl" >
+        </div>
+    </a>
+
+    <a href="../en/" onclick="saveLang('en')">
+        <div class="flags__container">
+            <img src="../img/uk.svg" class="flags__en">
+        </div>
+    </a>
+</div>
+<script src="../js/locale.js"></script>
+
+
+</div>
+
+<script>
+document.addEventListener("readystatechange", function() {
+    if (document.readyState === "complete") {
+        loading.complete();
+    }
+});
+</script>
+
+    
 
     </main>
 </body>

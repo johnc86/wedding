@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "sass": "npx sass sass:docs/css --watch"
+    "sass": "npx sass sass:docs/css --watch --no-source-map --style compressed"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "@11ty/eleventy": "^0.12.1"
   },
   "dependencies": {
+    "eleventy-favicon": "^1.1.2",
     "sass": "^1.45.0"
   }
 }

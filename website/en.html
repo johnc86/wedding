@@ -1,8 +1,10 @@
 ---
 layout: Master
-css: ../css/wedding.css
+assets: ../
 en: true
 ---
+{% include _loader.html %}
+
 <div class="content">
     {% include drawing.html %}
 
@@ -10,4 +12,14 @@ en: true
         {% include _header.html %}
         {% include _invitation.html %}
     </div>
+    {% include _flags.html %}
+
 </div>
+
+<script>
+document.addEventListener("readystatechange", function() {
+    if (document.readyState === "complete") {
+        loading.complete();
+    }
+});
+</script>

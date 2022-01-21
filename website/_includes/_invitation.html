@@ -13,8 +13,8 @@
     {% include drawing.html %}
 
     <div class="inv__rsvp">
-        <img class="bgimg_3" src="../img/white/element6.png">
-        <img class="bgimg_4" src="../img/wedgblue/element7.png">
+        <img class="bgimg_3" src="{{assets}}img/white/element6.png">
+        <img class="bgimg_4" src="{{assets}}img/wedgblue/element7.png">
         <div class="zindexup">
             {% if en %}
                 {% include en_rsvp.md %}
@@ -26,7 +26,7 @@
     </div>
     
     <div class="inv__location">
-        <img class="bgimg_6" src="../img/white/element11.png">
+        <img class="bgimg_6" src="{{assets}}img/white/element11.png">
         <div class="zindexup">
             {% if en %}
                 {% include en_location.md %}
@@ -38,9 +38,9 @@
     </div>
 
     <div class="inv__church">
-        <img class="bgimg_7" src="../img/white/element1.png">
-        <img class="bgimg_5" src="../img/wedgblue/element2.png">
-        <img class="bgimg_8" src="../img/wedgblue/element2.png">
+        <img class="bgimg_7" src="{{assets}}img/white/element1.png">
+        <img class="bgimg_5" src="{{assets}}img/wedgblue/element2.png">
+        <img class="bgimg_8" src="{{assets}}img/wedgblue/element2.png">
         <div class="zindexup">
             {% if en %}
                 {% include en_church.md %}
@@ -52,9 +52,9 @@
     </div>
 
     <div class="inv__party">
-    <img class="bgimg_9" src="../img/wedgblue/element2.png">
-    <img class="bgimg_10" src="../img/white/element9.png">
-    <img class="bgimg_11" src="../img/white/element15.png">
+    <img class="bgimg_9" src="{{assets}}img/wedgblue/element2.png">
+    <img class="bgimg_10" src="{{assets}}img/white/element9.png">
+    <img class="bgimg_11" src="{{assets}}img/white/element15.png">
         <div class="zindexup">
             {% if en %}
                 {% include en_party.md %}
@@ -66,10 +66,10 @@
     </div>
 
     <div class="inv__plan">
-    <img class="bgimg_7" src="../img/white/element1.png">
-        <img class="bgimg_5" src="../img/wedgblue/element2.png">
-        <img class="bgimg_8" src="../img/wedgblue/element2.png">
-    <img class="bgimg_11" src="../img/white/element15.png">
+    <img class="bgimg_7" src="{{assets}}img/white/element1.png">
+        <img class="bgimg_5" src="{{assets}}img/wedgblue/element2.png">
+        <img class="bgimg_8" src="{{assets}}img/wedgblue/element2.png">
+    <img class="bgimg_11" src="{{assets}}img/white/element15.png">
 
         <div class="zindexup">
             {% if en %}
@@ -81,3 +81,5 @@
         </div>
     </div>
 </div>
+
+{% include _flags.html %}

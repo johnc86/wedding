@@ -1,7 +1,7 @@
 @use '_core' as core;
 @import 'colour';
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap');
-$f-header: 'Comforter', cursive;
+// @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&family=Bitter:wght@300;400;500;600&family=Comforter&family=Comforter+Brush&family=Readex+Pro:wght@200;300;400;500&display=swap');
+$f-header: 'Comforter', serif;
 $f-text: 'Bitter', serif;
 $f-number: 'Alegreya', serif;
 $f-accent: 'Readex Pro', sans-serif;

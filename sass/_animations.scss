@@ -1,4 +1,6 @@
+@use '_core' as core;
 @use '_colour' as col;
+
 
 @keyframes fadein {
     0% { opacity: 0; }
@@ -29,8 +31,8 @@ $introlen: 5s;
     width: 100vw;
     height: 100vh;
     position: relative;
-    // background: grey;
-    visibility: hidden;
+    background: white;
+    // visibility: hidden;
 
     & .paint {
         position: absolute;
@@ -45,12 +47,14 @@ $introlen: 5s;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 75%;
-        animation: fadeout;
-        animation-delay: $introlen;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        width: 50%;
+
+        // animation: fadeout;
+        // animation-delay: $introlen;
+        // animation-duration: 2s;
+        // animation-iteration-count: 1;
+        // animation-fill-mode: forwards;
+        // animation: fadeout $introlen 2s 1 forwards;
     }
 
     & .flags {
@@ -58,11 +62,12 @@ $introlen: 5s;
         margin: auto;
         z-index: 101;
         position: relative;
-        animation: fadein;
-        animation-delay: $introlen;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        // animation: fadein;
+        // animation-delay: $introlen;
+        // animation-duration: 2s;
+        // animation-iteration-count: 1;
+        // animation-fill-mode: forwards;
+        // animation: fadein $introlen 2s 1 forwards;
         opacity: 0;
 
         &__container {
@@ -95,6 +100,8 @@ $color: hsl(0, 100%, 23%);
   position: absolute;
   top: 45%;
   left: calc(50% - 50px);
+//   visibility: hidden;
+  z-index: 1001;
 }
     
 .circle{
@@ -108,7 +115,7 @@ $color: hsl(0, 100%, 23%);
     border: 5px solid transparentize($color, 0.3);
     border-right: none;
     border-top: none;
-    background-clip: padding;
+    // background-clip: padding;
     box-shadow: inset 0px 0px 10px transparentize($color, 0.85);
   }
 }
@@ -131,5 +138,22 @@ $color: hsl(0, 100%, 23%);
   }
 }
 .spinner {
-  animation: spin 5s infinite linear;
+    animation: spin 5s infinite linear;
+
+    &__bg {
+        position: fixed;
+        background: col.$c-primary;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1000;
+    }
+}
+
+#loader {
+    background: red;
+    position: absolute;
+    top: -500vh;
+    left: -500vw;
+    // top: 0;
+    // left: 0;
 }

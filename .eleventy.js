@@ -1,3 +1,5 @@
+const faviconPlugin = require("eleventy-favicon");
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("website/img");
     eleventyConfig.addPassthroughCopy("website/js");
