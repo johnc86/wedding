@@ -1,6 +1,6 @@
-<h1>RSVP</h1>
+<h1>Potwiwerdzenia przybycia</h1>
 <div class="inv__RSVP__text">
-    <p>We hope that you can be there. With the challenges of planning an international wedding during a pandemic, we ask that you please R.S.V.P as soon as possible so we can have a good idea of how many people will be attending.</p>
+    <p>Mamy nadzieję, że będziecie mogli z nami świętować. Ze względów organizacyjnych najmocniej prosimy o potwierdzenie przybycia najszybciej jak to możliwe (najpóźniej do 15-tego lipca). Dziękujemy!</p>
 </div>
 
 {% include _form.html 
