@@ -47,16 +47,45 @@
 </details>
 
 <h2>Hotels</h2>
-<p>Here's a few hotels that have been recommended to us, we'd also suggest checking out airbnb as there's some great (cheap!) places to stay. </p>
+<p>Here are a few hotels that have been recommended to us. We'd also suggest checking out Airbnb as there are some great (cheap!) places to stay. </p>
 <details class="expando">
     <summary class="expando__summary">Hotel</summary>
     <div class="expando__all">
-        <p>
-            ?
+    
+        <ul><li><a href="https://all.accor.com/hotel/9441/index.pl.shtml" target="_blank">Hotel Mercury</a></li>
+
+<li><a href="https://www.ihg.com/holidayinn/hotels/gb/en/reservation" target="_blank">Hotel Holiday Inn</a></li>
+
+
+<li><a href="http://operahostel.com.pl" target="_blank">Opera Hostel</a> (hotel-standard, don't let the fact that it's a hostel put you off)</li>
+
+<li><a href="http://przystanbydgoszcz.pl" target="_blank">Przystań Bydgoszcz</a></li>
+
+<li><a href="https://www.hotelbohema.pl" target="_blank">Hotel Bohema (boutique)</a></li>
+
+<li><a href="https://www.rezydencjasowa.pl" target="_blank">Rezydencja Sowa</a></li>
+
+<li><a href="https://www.rezydencjasowa.pl" target="_blank">Apartamenty Sowa</a></li>
+
+<li><a href="http://www.mysoftly.com" target="_blank">Apartamenty MySoftly</a></li>
+
+<li><a href=" https://bydgoszcz.campanile.com/pl/" target="_blank">Hotel Campanile </li>
+
+<li><a href="http://villa-secesja.bydgoszcz-hotel.com/pl/" target="_blank">Hotel Villa Secesja</li>
+
+<li><a href="https://www.city-hotel.pl" target="_blank">Hotel City</li>
+
+<li><a href="https://www.nordichaven.com/noclegi" target="_blank">Nordic Haven</li>
+
+<li><a href=" https://katarynkabydgoszcz.pl/o-apartamentach-w-centrum-bydgoszczy/" target="_blank">Apartamenty Katarynka na Starym Rynku</li>
+</ul>
         </p>
     </div>
 </details>
 
 <h2>Things to do</h2>
-<p>Bydgoszcz is a smaller city but there are some fun thigns to check out.</p>
-<p>It's easy to get the train or a plane to Warsaw or Krakow if you want to explore further. These bigger cities aren't as cheap as Bydgoszcz with more tourist traps but obviously lots of attractions if you plan on doing a longer holiday.</p>
+<p>Bydgoszcz is a smaller city but it's very pretty and there are some fun thigns to check out. As well as museums, galleries, gorgeous churches and fantastic food, it's lovely to take walk around the Old Town and the little cobbled streets surroinding it. Maybe stop for a giant scoop of ice-cream on the way. You can take a look at the <a href="https://visitbydgoszcz.pl/en/explore/what-to-see">city's attractions here.</a> </p>
+
+<p>If  you're planning on staying a little longer, Toruń is the next nearest city. As well as being the birthplace of Nicolaus Copernicus and home of the best gingerbread in the world, it's very old and beautiful. <a href="https://www.torun.pl/en">Take a look here.</a></p>
+
+<p>It's also easy to get the train to Warsaw, Kraków, Wrocław or Poznań if you want to explore further. These bigger cities aren't as cheap as Bydgoszcz but obviously there are lots of attractions if you plan on doing a longer holiday.</p>

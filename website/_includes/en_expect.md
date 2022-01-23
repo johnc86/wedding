@@ -1,4 +1,6 @@
-<h1>What to Expect</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam recusandae eum eveniet totam voluptatem quia a, tempora fugit quisquam quod tenetur blanditiis placeat suscipit enim incidunt sit corrupti, voluptas soluta!
-Tempora architecto, hic enim distinctio cum commodi expedita suscipit tempore, veritatis maxime atque vitae voluptatum illum reprehenderit eius laudantium vero obcaecati optio adipisci doloremque nemo iure necessitatibus. Eveniet, dolor culpa.
-Voluptatum, aut. Ipsum, quae obcaecati eius quod quisquam, laboriosam delectus excepturi possimus quia dicta eos impedit cumque? Suscipit dolore quisquam eaque distinctio dolorem temporibus fugit doloribus voluptatum tenetur, officiis maxime.</p>
+<h1>Other information</h1>
+<h2>Dress code</h2>
+<p>We would describe the dress code as formal, which is the default for Polish weddings. There is no theme. Just make sure you have comfortable dancing shoes!</p>
+
+<h2>COVID-19</h2>
+<p>We excpect everyone will be fully vaccinated against COVID-19. As of the 23rd January 2022, you are also required to present a negative result of the COVID-19 test taken within 24 hours before crossing the Polish border (this can be either a Lateral Flow or PCR test). This could change in the coming months, so we will update this section if there are any changes to the guidance. You can find out more on <a href="https://www.gov.uk/foreign-travel-advice/poland/entry-requirements#entry-rules-in-response-to-coronavirus-covid-19">GOV.UK</a> or <a href="https://www.gov.pl/web/coronavirus/outside-the-european-union-schengen-area-turkey">GOV.PL.</a></p>

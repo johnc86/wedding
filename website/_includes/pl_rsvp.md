@@ -4,11 +4,11 @@
 </div>
 
 {% include _form.html 
-    response_yes:"I'll be there"
-    response_no:"I can't make it"
-    placeholder_email:"Your Email Address"
-    placeholder_name:"Your Name"
-    placeholder_diet:"Dietary Requirements"
-    placeholder_plusone:"Will you be bringing anyone?"
-    button_text:"Submit" 
+    response_yes:"Tak, oczywiście będziemy!"
+    response_no:"Nie, niestety nie możemy"
+    placeholder_email:"Twój adres email"
+    placeholder_name:"Twoje imię i nazwisko"
+    placeholder_diet:"Wymagania dietetyczne"
+    placeholder_plusone:"Czy planujesz z kimś przyjechać?"
+    button_text:"Wyślij" 
 %}

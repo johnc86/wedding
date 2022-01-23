@@ -1,6 +1,6 @@
 <h1>RSVP</h1>
 <div class="inv__RSVP__text">
-    <p>We hope that you can be there. With the challenges of planning an international wedding during a pandemic, we ask that you please R.S.V.P as soon as possible so we can have a good idea of how many people will be attending.</p>
+    <p>We hope that you will be able to join us! With the challenges of planning an international wedding during a pandemic, we ask that you please R.S.V.P. as soon as possible so we can have a good idea of how many people will be attending.</p>
 </div>
 
 {% include _form.html 

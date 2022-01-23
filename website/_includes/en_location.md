@@ -1,6 +1,6 @@
 <h1>Location</h1>
 
-<p>The wedding will take place in Maja's hometown Bydgoszcz. Bydgoszcz is a small city in central Poland.</p>
+<p>The wedding will take place in Bydgoszcz, Maja's hometown. Bydgoszcz is a small city in central Poland.</p>
 
 <div class="inv__location__map">
         <img class="wider" src="{{assets}}img/bydgoszcz.png">
