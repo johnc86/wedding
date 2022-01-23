@@ -1,7 +1,9 @@
-<h1>DOdatkowe informacje</h1>
+<h1>Dodatkowe informacje</h1>
 <h2>COVID-19</h2>
-<p>Uprzejmie prosimy o wykonanie testu na COVID-19 przed przybyciem. Chcemy aby każdy kto będzie mógł z świętować z nami w tym pięknym dniu czuł się bezpiecznie.</p>
 
-<p>Wszyscy goście przylatujący z Anglii będą wykonywać takie same testy przed przybyciem do Polski. Wielu z zagranicznych gości przyeci tylko na kilka dni, więc bardzo zależy nam aby najbardziej jak to możliwe zmniejszyć ryzyko zakarzenia, przed wszystkim ze względu na kwarantannę w razie pozytywnego wyniku przed wylotem do domu.</p>
+<p>Bardzo prosimy wszystkich gości o wykonanie testu na COVID-19 przed przybyciem na uroczystość.</p>
+<p>Będziemy dokładnie śledzić sytuację pandemiczną i zaktualizujemy tą część strony przed ślubem w razie zmian.</p>
 
-<p>Dziękujemy bardzo i już nie możemy się doczekać kiedy Was zobaczymy!</p>
+<h2>Hotel</h2>
+<p>W Dworze Hulanka jest dostępna ograniczona ilość pokoi hotelowych. Jeśli chcesz zarezerwować pokój, prosimy o kontakt.</p>
+<p>Dziękujemy najmocniej i już nie możemy się doczekać kiedy Was zobaczymy!</p>
