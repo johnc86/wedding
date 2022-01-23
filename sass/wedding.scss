@@ -85,7 +85,8 @@ main {
     }
 
     & h1 {
-        margin: 5rem 0 0 0;
+        margin: 5rem 0 2rem 0;
+        font-size: 3.2rem;
     }
 
     & h2 {
@@ -93,7 +94,7 @@ main {
         margin: 0;
         font-family: f.$f-text;
         color: col.$c-black;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     & h3 {
@@ -238,6 +239,29 @@ main {
     }
 }
 
+.extlink {
+    display:block;
+    background: col.$c-bg2;
+    @include wide;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+    &::after {
+        content:'';
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background: url('../img/link.svg') no-repeat;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 .stretchlink {
     position: absolute;
     top: 0;
@@ -267,6 +291,7 @@ main {
 
     &__all, &__all p {
         text-align: left;
+        margin-top: 0;
     }
 }
 
