@@ -1,13 +1,7 @@
 <p style="margin-bottom:0;">
-    You are invited to the wedding of
-</p>
-<h2>Maja Lorkowska</h2><h3>&</h3><h2>John Callaghan.</h2>
-<p>
-    The ceremony will take place at 17:00, in <b>Kościół Wniebowstąpienia Pańskiego, ul. Atolowa 6, Osowa Góra, 85-435</b>.
-</p>
-<p>
-    The party will take place at <b>Dwór Hulanka, ul. Grunwaldzka 309, 85-438 Bydgoszcz.</b>
-</p>
-<p>
-    More information is provided below, so please take a look and if you have any questions please just let us know.
-</p>
+    Zapraszamy na Ślub</p>
+    <h2>Mai Lorkowskiej</h2><h3>&</h3><h2>John'a Callaghan'a,</h2>
+<p>który odbędzie się 3 września 2022, o godzinie 17.00 w Kościele WNiebostąpienia Pańskiego, ul. Atolowa 6, Osowa Góra, 85-435.</p>
+    <p>Tuż po ceremonii, już jako małżonkowie zapraszamy do sali weselnej Dwór Hulanka, Pawłówek 6, 85-438 Bydgoszcz.</p>
+    
+    

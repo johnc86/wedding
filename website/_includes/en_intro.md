@@ -9,5 +9,5 @@
     The party will take place at <b>Dwór Hulanka, Pawłówek 6, 85-438 Bydgoszcz.</b>
 </p>
 <p>
-    More information is provided below, so please take a look and if you have any questions please just let us know.
+    More information is provided below, so please take a look and if you have any questions, just let us know.
 </p>

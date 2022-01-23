@@ -1,10 +1,9 @@
-<h1>Location</h1>
-
-<p>The wedding will take place in Maja's hometown Bydgoszcz. Bydgoszcz is a small city in central Poland.</p>
+<h1>Lokalizacja</h1>
+<p>Ślub odbędzie się w Bydgoszczy, rodzinnym mieście Mai.</p>
 
 <div class="inv__location__map">
         <img class="wider" src="../img/bydgoszcz.png">
-        <span>Click to explore Bydgoszcz on Google Maps</span>
+        <span>Bydgoszcz na Google Maps</span>
     <a class="stretchlink" target="_blank" href="https://goo.gl/maps/saEBTmnakyfUncR6A">
     </a>
 </div>

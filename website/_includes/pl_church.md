@@ -1,11 +1,10 @@
-<h1>The Church</h1>
+<h1>Kościół</h1>
 <div class="map-pin">
     <a href="https://goo.gl/maps/aEmMT7dcigrc1UDn7" target="_blank"><p><b>Kościół Wniebowstąpienia Pańskiego, ul. Atolowa 6, Osowa Góra, 85-435 Bydgoszcz.</b></p></a>
 </div>
-<p>The church is located a little outside the city, so we'll be providing transport from the city centre (and afterwards to the party). You can make your own way there if you prefer, there is some parking available nearby and a bus stop nearby.
-</p>
-<p>The ceremony starts at 5pm, we'll be contacting everyone to confirm the time for the transport - but it'll be mid afternoon, probably around 4pm.</p>
-<p>The ceremony itself will be very similar to an English Catholic wedding, just mostly spoken in Polish. There will be a translator for the vows so you should understand little bits, and obviously the priest is aware that half of the congregation isn't understanding what he is saying. Just stand when the Polish people stand, kneel when they kneel and admire the lovely church.
-</p>
+<p>Kościół Wniebostąpienia Pańskiego znajduję się na Osowej Górze, około 15 minut jazdy od centum. Jeśli planujecie przyjechać samochodem, przy kościele znajduje się parking. Jeśli nie, zapewnimy transport z centrum miasta.</p>
 
+<p>Ceremonia w kościele zacznie się o 17.00. Jeśli planujecie zatrymać się w centrum Bydgoszczy i skorzystać z transportu do kościoła, skontaktujemy się ze wszystkimi, aby ustalić czas i miejce na spotkanie.</p>
+
+<p>Jak wiecie, nasz ślub bęzdzie międzynarodowy! Część gości przyleci z Wielkiej Brytanii, dlatego, pomimo, że sama ceremonia i wesele odbędzie się głównie w języku polskim, to na miejscu będzie również konferansjer, który na bieżąco wytłumaczy po angielsku przebieg ślubu.</p>
 <img class="wider" src="../img/dance-crop.jpg">
