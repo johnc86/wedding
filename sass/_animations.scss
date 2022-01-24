@@ -157,3 +157,14 @@ $color: hsl(0, 100%, 23%);
     // top: 0;
     // left: 0;
 }
+
+.thankyou {
+    font-size: 8rem;
+    &--en {
+        animation: fadeout 4s 2s 1 forwards;
+    }
+    &--pl {
+        opacity: 0;
+        animation: fadein 4s 2s 1 forwards;
+    }
+}

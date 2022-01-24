@@ -1,0 +1,27 @@
+---
+layout: Master
+assets: ../
+
+---
+<noscript><div class="noscript">Sorry, your browser does not support javascript so this site will not display correctly.<br>Please choose your language:<br><br><a href="en/">English</a><br><br><a href="en/">Polski</a></div></noscript>
+
+<div id="cssintro" class="cssintro">
+    <div class="mjlogo thankyou--en">
+        <h1>Thank You</h1>
+    </div>
+    <div class="mjlogo thankyou--pl">
+        <h1>Dziękuję</h1>
+    </div>
+    
+    {% include "_flags.html" %}
+<div>
+
+<script src="../{{assets}}js/intro.js"></script>
+<script>
+    var introLength = 4000;
+    addPaint(introLength);
+    setTimeout(function () {
+        checkLanguage()
+    }, introLength*2);
+
+</script>

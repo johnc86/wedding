@@ -1,16 +1,25 @@
 <div class="inv__form">
-    <form action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
+    <form name="rsvp" action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
         <div class="inv__form--radio">
-            <input type="radio" id="respondyes" name="response" value="true" >
+            <input type="radio" id="respondyes" name="response" value="true">
             <label for="respondyes">{{ response_yes }}</label>
         </div>
         <div class="inv__form--radio">
-            <input type="radio" id="respondno" name="response" value="false" >
+            <input type="radio" id="respondno" name="response" value="false" required>
             <label for="respondno">{{response_no}}</label>
         </div>
+        <div id="validate-response" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
         
-        <input type="email" name="email" placeholder="{{placeholder_email}}">
-        <input type="text" name="name" placeholder="{{placeholder_name}}">
+        <input type="email" name="email" placeholder="{{placeholder_email}}" required>
+        <div id="validate-email" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
+        <input type="text" name="name" placeholder="{{placeholder_name}}" required>
+        <div id="validate-name" class="inv__form--validate">
+            Please provide a name
+        </div>
         <input type="text" name="food" placeholder="{{placeholder_diet}}">
         <input type="text" name="plusone" placeholder="{{placeholder_plusone}}">
         <br>

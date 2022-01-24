@@ -73,9 +73,13 @@
 <script src="js/intro.js"></script>
 <script>
 document.addEventListener("readystatechange", function() {
+    var introLength = 4000;
     if (document.readyState === "complete") {
         loading.complete();
-        addPaint();
+        addPaint(introLength);
+        setTimeout(function () {
+            checkLanguage()
+        }, introLength*2);
     }
 });
 </script>

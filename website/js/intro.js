@@ -1,8 +1,13 @@
-var introTime = 3000;
-
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-async function addPaint () { // We need to wrap the loop into an async function for this to work
+async function addPaint (introTime) { 
+    // We need to wrap the loop into an async function for this to work
+    console.log("running intro, for time: " + introTime);
+
+    if (introTime == null) {
+        console.log("no time set");
+        introTime = 3000;
+    }
     var numOfPaints = 250;
     
     // The size of plottable area, the 500 is roughly the size of each asset to ensure the edges get covered
@@ -22,7 +27,8 @@ async function addPaint () { // We need to wrap the loop into an async function 
         }
 
         var img = document.createElement("img");
-        img.src = "../img/" + paintcol + "/element" + randimg + ".png";
+        // img.src = window.location.protocol + "//" + window.location.hostname + "/img/" + paintcol + "/element" + randimg + ".png";
+        img.src = "/img/" + paintcol + "/element" + randimg + ".png";
         img.classList.add('paint');
         var src = document.getElementById("cssintro");
         src.appendChild(img);
@@ -44,8 +50,6 @@ async function addPaint () { // We need to wrap the loop into an async function 
     
         // Random rotation
         var randr = Math.floor(Math.random() * 360);
-        // console.log("rotate " + randr);
-        // img.style.transform = "rotate(" + randr + ")";
         img.style.transform = "rotate(" + randr + "deg)";
 
         // lower opacity for white
@@ -55,7 +59,5 @@ async function addPaint () { // We need to wrap the loop into an async function 
     
         await timer(introTime/numOfPaints);
     }
-    
-    // show flags
-    checkLanguage();
+    console.log("loop complete");
 }

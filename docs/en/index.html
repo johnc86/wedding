@@ -118,18 +118,27 @@
 </div>
 
 <div class="inv__form">
-    <form action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
+    <form name="rsvp" action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
         <div class="inv__form--radio">
-            <input type="radio" id="respondyes" name="response" value="true" >
+            <input type="radio" id="respondyes" name="response" value="true">
             <label for="respondyes">I'll be there</label>
         </div>
         <div class="inv__form--radio">
-            <input type="radio" id="respondno" name="response" value="false" >
+            <input type="radio" id="respondno" name="response" value="false" required>
             <label for="respondno">I can't make it</label>
         </div>
+        <div id="validate-response" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
         
-        <input type="email" name="email" placeholder="Your Email Address">
-        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <div id="validate-email" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <div id="validate-name" class="inv__form--validate">
+            Please provide a name
+        </div>
         <input type="text" name="food" placeholder="Dietary Requirements">
         <input type="text" name="plusone" placeholder="Will you be bringing anyone?">
         <br>
@@ -172,7 +181,7 @@
 <p>We would describe the dress code as formal, which is the default for Polish weddings. There is no theme. Just make sure you have comfortable dancing shoes!</p>
 
 <h2>COVID-19</h2>
-<p>We excpect everyone will be fully vaccinated against COVID-19. As of the 23rd January 2022, you are also required to present a negative result of the COVID-19 test taken within 24 hours before crossing the Polish border (this can be either a Lateral Flow or PCR test). This may change in the coming month though, so we will update this section if there are any changes to the guidance. You can find out more on <a href="https://www.gov.uk/foreign-travel-advice/poland/entry-requirements#entry-rules-in-response-to-coronavirus-covid-19">GOV.UK</a> or <a href="https://www.gov.pl/web/coronavirus/outside-the-european-union-schengen-area-turkey">GOV.PL.</a></p>
+<p>We excpect everyone will be fully vaccinated against COVID-19. As of the 23rd January 2022, you are also required to present a negative result of the COVID-19 test taken within 24 hours before crossing the Polish border (this can be either a Lateral Flow or PCR test). This may change in the coming months though, so we will update this section if there are any changes to the guidance. You can find out more on <a href="https://www.gov.uk/foreign-travel-advice/poland/entry-requirements#entry-rules-in-response-to-coronavirus-covid-19">GOV.UK</a> or <a href="https://www.gov.pl/web/coronavirus/outside-the-european-union-schengen-area-turkey">GOV.PL.</a></p>
 
             
             
@@ -213,7 +222,7 @@
     <a href="https://goo.gl/maps/8egdG9CUiV9P2hH39" target="_blank"><p><b>Dwór Hulanka, Pawłówek 6, 85-438 Bydgoszcz.</b></p></a>
 </div>
 
-<p>You'll be drinking lots of Vodka, so start preparing your body! A Polish wedding party is quite different to an English wedding.</p>
+<p>You'll be drinking lots of vodka, so start preparing your body! A Polish wedding party is quite different to an English wedding.</p>
 <p>The party starts immediately after the wedding ceremony and transport to the venue will be available.</p>
 <p><b>Rooms at the venue are limited and <u>reserved for close family or those who need to look after young children</u>. If you would like to put your name down for a room at the party venue please contact us to chat. However, the venue is only a short 15 minute ride back to the city. We'll be making sure everybody gets back to their hotel safely afterwards.</b></p>
 <p>To summarise the actual party - it basically comes in waves. You'll be fed, we'll drink some vodka and then we'll dance. After a short while, more food will come and we repeat until sunrise. Yes, a Polish wedding usually goes on til the early hours. The steady intake of food and mandatory dancing should be enough to keep you sober. The tradition is to do a shot at various times throughout the evening, so <em>pace yourself</em>.</p>

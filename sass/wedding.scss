@@ -178,6 +178,20 @@ main {
                 color: black;
             }
         }
+
+        &--validate {
+            background: col.$c-secondary;
+            color: col.$c-white;
+            padding: 1rem 2rem;
+            animation: gored 2s infinite ease-in-out;
+            display: none;
+        }
+
+        @keyframes gored {
+            0% { background: col.$c-secondary; }
+            50% { background: red; }
+            100% { background: col.$c-secondary; };
+        }
     }
 }
 

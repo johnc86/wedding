@@ -108,24 +108,33 @@
         <div class="zindexup">
             
             
-                <h1>Potwiwerdzenia przybycia</h1>
+                <h1>Potwiwerdzenie przybycia</h1>
 <div class="inv__RSVP__text">
     <p>Mamy nadzieję, że będziecie mogli z nami świętować. Ze względów organizacyjnych najmocniej prosimy o potwierdzenie przybycia najszybciej jak to możliwe (najpóźniej do 15-tego lipca). Dziękujemy!</p>
 </div>
 
 <div class="inv__form">
-    <form action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
+    <form name="rsvp" action="https://app.99inbound.com/api/e/jF1yDlRl" method="POST">
         <div class="inv__form--radio">
-            <input type="radio" id="respondyes" name="response" value="true" >
+            <input type="radio" id="respondyes" name="response" value="true">
             <label for="respondyes">Tak, oczywiście będziemy!</label>
         </div>
         <div class="inv__form--radio">
-            <input type="radio" id="respondno" name="response" value="false" >
+            <input type="radio" id="respondno" name="response" value="false" required>
             <label for="respondno">Nie, niestety nie możemy</label>
         </div>
+        <div id="validate-response" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
         
-        <input type="email" name="email" placeholder="Twój adres email">
-        <input type="text" name="name" placeholder="Twoje imię i nazwisko">
+        <input type="email" name="email" placeholder="Twój adres email" required>
+        <div id="validate-email" class="inv__form--validate">
+            Please select if you will be attending or not
+        </div>
+        <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
+        <div id="validate-name" class="inv__form--validate">
+            Please provide a name
+        </div>
         <input type="text" name="food" placeholder="Wymagania dietetyczne">
         <input type="text" name="plusone" placeholder="Czy planujesz z kimś przyjechać?">
         <br>
@@ -175,7 +184,7 @@
 
 <p>Ceremonia w kościele zacznie się o 17.00. Jeśli planujecie zatrymać się w centrum Bydgoszczy i skorzystać z transportu do kościoła, skontaktujemy się ze wszystkimi, aby ustalić czas i miejce na spotkanie.</p>
 
-<p>Jak wiecie, nasz ślub bęzdzie międzynarodowy! Część gości przyleci z Wielkiej Brytanii, dlatego, pomimo, że sama ceremonia i wesele odbędzie się głównie w języku polskim, to na miejscu będzie również konferansjer, który na bieżąco wytłumaczy po angielsku przebieg ślubu.</p>
+<p>Jak wiecie, nasz ślub będzie międzynarodowy! Część gości przyleci z Wielkiej Brytanii, dlatego, pomimo, że sama ceremonia i wesele odbędzie się głównie w języku polskim, to na miejscu będzie również konferansjer, który na bieżąco wytłumaczy po angielsku przebieg ślubu.</p>
 <img class="wider" src="../img/dance-crop.jpg">
             
         </div>

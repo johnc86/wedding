@@ -3,7 +3,7 @@
     <a href="https://goo.gl/maps/8egdG9CUiV9P2hH39" target="_blank"><p><b>Dwór Hulanka, Pawłówek 6, 85-438 Bydgoszcz.</b></p></a>
 </div>
 
-<p>You'll be drinking lots of Vodka, so start preparing your body! A Polish wedding party is quite different to an English wedding.</p>
+<p>You'll be drinking lots of vodka, so start preparing your body! A Polish wedding party is quite different to an English wedding.</p>
 <p>The party starts immediately after the wedding ceremony and transport to the venue will be available.</p>
 <p><b>Rooms at the venue are limited and <u>reserved for close family or those who need to look after young children</u>. If you would like to put your name down for a room at the party venue please contact us to chat. However, the venue is only a short 15 minute ride back to the city. We'll be making sure everybody gets back to their hotel safely afterwards.</b></p>
 <p>To summarise the actual party - it basically comes in waves. You'll be fed, we'll drink some vodka and then we'll dance. After a short while, more food will come and we repeat until sunrise. Yes, a Polish wedding usually goes on til the early hours. The steady intake of food and mandatory dancing should be enough to keep you sober. The tradition is to do a shot at various times throughout the evening, so <em>pace yourself</em>.</p>

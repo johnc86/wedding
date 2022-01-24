@@ -15,6 +15,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("content_pl", function (collection) {
         return collection.getFilteredByGlob("./website/content/en/*.md");
     });
+
+    // eleventyConfig.setBrowserSyncConfig({
+    //     open: true,
+    //     port: 80
+    // });
     
     return {
         dir: {
