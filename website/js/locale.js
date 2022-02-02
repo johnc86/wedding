@@ -8,8 +8,8 @@ function checkLanguage() {
             //
             //  This is where we can disable autodetect...
             //
-            // var browserLang = null;
-            var browserLang = navigator.language || navigator.userLanguage; 
+            var browserLang = null;
+            // var browserLang = navigator.language || navigator.userLanguage; 
             if (browserLang == "en-GB") {
                 saveLang('en');
             }
