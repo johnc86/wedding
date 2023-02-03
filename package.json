@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "eleventy-favicon": "^1.1.2",
+    "lightgallery": "^2.7.1",
     "sass": "^1.45.0"
   }
 }

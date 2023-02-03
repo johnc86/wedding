@@ -3,6 +3,8 @@ const faviconPlugin = require("eleventy-favicon");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("website/img");
     eleventyConfig.addPassthroughCopy("website/js");
+    eleventyConfig.addPassthroughCopy("website/images");
+    eleventyConfig.addPassthroughCopy("website/fonts");
     eleventyConfig.setBrowserSyncConfig({
         files: [
             './docs/css/*.css',
