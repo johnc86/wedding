@@ -24,13 +24,24 @@
     <script src="{{ assets }}js/lg-thumbnail.umd.js"></script>
     <script src="{{ assets }}js/lg-zoom.umd.js"></script>
     <script src="{{ assets }}js/lg-share.umd.js"></script>
+    <script src="{{ assets }}js/lg-hash.umd.js"></script>
     <script type="text/javascript">
-        lightGallery(document.getElementById('album'), {
-            plugins: [lgZoom, lgThumbnail, lgShare],
+        const lgOptions = {
+            plugins: [lgZoom, lgThumbnail, lgShare, lgHash],
             licenseKey: '0000-0000-000-0000',
             speed: 500,
             exThumbImage: 'data-thumbs'
+        }
+
+        const lg = document.getElementById('album');
+
+        // Perform any action just before opening the gallery
+        lg.addEventListener('lgBeforeOpen', () => {
+            const url = new URL(window.location);
+            history.pushState(event.detail, '', url)
         });
+
+        lightGallery(lg, lgOptions);
     </script>
 </body>
 </html>
