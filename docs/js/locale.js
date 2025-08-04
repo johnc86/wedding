@@ -2,7 +2,13 @@ function checkLanguage() {
     if (typeof(Storage) !== "undefined") {
         var locale = localStorage.getItem("lang");
         if (locale) {
-            window.location.href = "/" + locale;
+            // Dynamically determine base path for subdirectory hosting
+            var basePath = window.location.pathname.split('/')[1];
+            if (basePath && basePath !== "en" && basePath !== "pl") {
+                window.location.href = "/" + basePath + "/" + locale;
+            } else {
+                window.location.href = "/" + locale;
+            }
         }
         else {
             //
