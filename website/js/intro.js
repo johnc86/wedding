@@ -27,8 +27,11 @@ async function addPaint (introTime) {
         }
 
         var img = document.createElement("img");
-        // img.src = window.location.protocol + "//" + window.location.hostname + "/img/" + paintcol + "/element" + randimg + ".png";
-        img.src = "/img/" + paintcol + "/element" + randimg + ".png";
+        // Dynamically determine base path for subdirectory hosting
+        var basePath = window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+        // Remove double slashes if at root
+        if (basePath === '//') basePath = '/';
+        img.src = basePath + "img/" + paintcol + "/element" + randimg + ".png";
         img.classList.add('paint');
         var src = document.getElementById("cssintro");
         src.appendChild(img);
